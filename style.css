@@ -18,6 +18,7 @@ body{
 
 .logo{
     text-align: center;
+    padding: 1em;
 }
 
 ul{
@@ -48,6 +49,7 @@ ul{
 
 .contact{
     background: #ffffff;
+    padding: 3em;
 }
 
 .contact form{
