@@ -1,0 +1,19 @@
+$colors:(
+    primary: #00aefd,
+    primary-light: #44bcd8,
+    secondary: #69bdd2,
+
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: color(primary);
+}
