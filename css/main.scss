@@ -15,5 +15,38 @@ body, html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+
+    /*
+    .bg {
+        background-color: color(primary);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-image: url(/img/asdfasdfasdf.jpg);
+        background-size: cover;
+    }*/
+
+    header {
+        .logo {
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            text-align: center;
+            margin: auto;
+            padding: 1em;
+            background-color: color(secondary);
+        }
+    }
+}
+main {
     background-color: color(primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url(/img/asdfasdfasdf.jpg);
+    background-size: cover;
 }
