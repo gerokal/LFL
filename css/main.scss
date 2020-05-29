@@ -1,7 +1,10 @@
 $colors:(
-    primary: #00aefd,
-    primary-light: #44bcd8,
-    secondary: #69bdd2,
+    primary: #00AEFD,
+    primary-light: #85D4FF,
+    primary-dark: #031A6B,
+    secondary: #CDAA51,
+    secondary-light: #F9EDDD,
+    secondary-dark: #9E7E2E
 
 );
 
@@ -17,7 +20,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 
-    /*
+
     .bg {
         background-color: color(primary);
         width: 100%;
@@ -26,27 +29,22 @@ body {
         z-index: -1;
         background-image: url(/img/asdfasdfasdf.jpg);
         background-size: cover;
-    }*/
+    }
 
     header {
+        text-align: center;
+
         .logo {
-            text-align: center;
             padding: 1em;
         }
         nav {
-            text-align: center;
             margin: auto;
             padding: 1em;
-            background-color: color(secondary);
+            background-color: color(secondary-light);
         }
     }
 }
+
 main {
     background-color: color(primary);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    background-image: url(/img/asdfasdfasdf.jpg);
-    background-size: cover;
 }
