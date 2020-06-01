@@ -19,26 +19,33 @@ body, html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
 
 
-    .bg {
-        background-color: color(primary);
+    /*.bg {
+        background-color: #fff;
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: -1;
         background-image: url(/img/asdfasdfasdf.jpg);
         background-size: cover;
-    }
+    }*/
 
     header {
         text-align: center;
+        background-color: #ffffff;
+        grid-column: 1/5;
+        
 
         .logo {
             padding: 1em;
+            background: #cccccc;
         }
         nav {
-            margin: auto;
             padding: 1em;
             background-color: color(secondary-light);
         }
@@ -47,4 +54,9 @@ body {
 
 main {
     background-color: color(primary);
+    grid-column: 1/5;
+    grid-row: 2/4;
+    height: 100%;
+    background-image: url(/img/asdfasdfasdf.jpg);
+    background-size: cover;
 }

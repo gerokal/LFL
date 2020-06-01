@@ -5,33 +5,52 @@ body, html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-}
-
-body .bg {
-  background-color: #00AEFD;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  background-image: url(/img/asdfasdfasdf.jpg);
-  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  /*.bg {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-image: url(/img/asdfasdfasdf.jpg);
+        background-size: cover;
+    }*/
 }
 
 body header {
   text-align: center;
+  background-color: #ffffff;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
 }
 
 body header .logo {
   padding: 1em;
+  background: #cccccc;
 }
 
 body header nav {
-  margin: auto;
   padding: 1em;
   background-color: #F9EDDD;
 }
 
 main {
   background-color: #00AEFD;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+  height: 100%;
+  background-image: url(/img/asdfasdfasdf.jpg);
+  background-size: cover;
 }
 /*# sourceMappingURL=main.css.map */
