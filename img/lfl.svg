@@ -1,7 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="89.425" height="84.568" viewBox="0 0 89.425 84.568">
-  <g id="Group_1" data-name="Group 1" transform="translate(-50.5 -52.5)">
-    <text id="LFL" transform="translate(95 115)" fill="#3d6cb9" font-size="61" font-family="Calibri"><tspan x="-39.659" y="0">LFL</tspan></text>
-    <line id="Line_1" data-name="Line 1" y2="84.568" transform="translate(52.5 52.5)" fill="none" stroke="#3d6cb9" stroke-width="4"/>
-    <line id="Line_2" data-name="Line 2" y2="84.568" transform="translate(137.925 52.5)" fill="none" stroke="#3d6cb9" stroke-width="4"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="89.425"
+   height="84.568"
+   viewBox="0 0 89.425 84.568"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="lfl.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="971"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="5.5813073"
+     inkscape:cx="60.98975"
+     inkscape:cy="44.660581"
+     inkscape:window-x="1280"
+     inkscape:window-y="21"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <g
+     id="Group_1"
+     data-name="Group 1"
+     transform="matrix(0.83050847,0,0,0.83050847,-34.362288,-36.434915)"
+     style="fill:#01b0ef;fill-opacity:1">
+    <text
+       id="LFL"
+       font-size="61"
+       style="font-size:54.27511978px;font-family:Calibri;fill:#01b0f1;stroke-width:0.88975608;fill-opacity:1;stroke:none;stroke-opacity:1;"
+       x="95.167458"
+       y="112.84265">
+      <tspan
+         x="59.880623"
+         y="112.84265"
+         id="tspan2"
+         style="stroke-width:0.88975608;fill:#01b0f1;fill-opacity:1;stroke:none;stroke-opacity:1;">LFL</tspan>
+    </text>
+    <line
+       id="Line_1"
+       data-name="Line 1"
+       y2="84.568001"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="fill:#01b0f1;stroke:#01b0f1;stroke-width:4;fill-opacity:1;stroke-opacity:1"
+       transform="translate(52.5,52.5)" />
+    <line
+       id="Line_2"
+       data-name="Line 2"
+       y2="84.568001"
+       transform="translate(137.925,52.5)"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="fill:#01b0ef;stroke:#01b0f1;stroke-width:4;fill-opacity:1;stroke-opacity:1" />
   </g>
 </svg>
