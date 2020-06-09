@@ -50,10 +50,6 @@ body {
     border-bottom: var(--primary) 1px solid;
 }
 
-.logo img {
-    width: 100px;
-}
-
 .bar {
     padding: 1em;
     margin: auto;
