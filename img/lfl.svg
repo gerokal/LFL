@@ -41,29 +41,34 @@
      id="namedview10"
      showgrid="false"
      inkscape:zoom="5.5813073"
-     inkscape:cx="60.98975"
+     inkscape:cx="28.470487"
      inkscape:cy="44.660581"
      inkscape:window-x="1280"
      inkscape:window-y="21"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg8" />
+     inkscape:current-layer="LFL" />
   <g
      id="Group_1"
      data-name="Group 1"
      transform="matrix(0.83050847,0,0,0.83050847,-34.362288,-36.434915)"
      style="fill:#01b0ef;fill-opacity:1">
-    <text
-       id="LFL"
-       font-size="61"
-       style="font-size:54.27511978px;font-family:Calibri;fill:#01b0f1;stroke-width:0.88975608;fill-opacity:1;stroke:none;stroke-opacity:1;"
-       x="95.167458"
-       y="112.84265">
-      <tspan
-         x="59.880623"
-         y="112.84265"
-         id="tspan2"
-         style="stroke-width:0.88975608;fill:#01b0f1;fill-opacity:1;stroke:none;stroke-opacity:1;">LFL</tspan>
-    </text>
+    <g
+       aria-label="LFL"
+       style="font-size:54.27511978px;font-family:Calibri;fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.88975608;stroke-opacity:1"
+       id="LFL">
+      <path
+         d="m 68.36111,108.78792 h 13.436273 v 4.05473 h -18.25955 v -34.823 h 4.823277 z"
+         style="fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.88975608;stroke-opacity:1"
+         id="path11" />
+      <path
+         d="m 106.04628,78.01965 v 3.922225 H 91.178921 v 12.058193 h 12.641229 v 3.922226 H 91.178921 v 14.920356 h -4.849779 v -34.823 z"
+         style="fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.88975608;stroke-opacity:1"
+         id="path13" />
+      <path
+         d="m 116.06385,108.78792 h 13.43628 v 4.05473 h -18.25955 v -34.823 h 4.82327 z"
+         style="fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.88975608;stroke-opacity:1"
+         id="path15" />
+    </g>
     <line
        id="Line_1"
        data-name="Line 1"
