@@ -8,7 +8,7 @@
     --light:#0dffff;
     --dark:#0000ff;
     --cons:#ffcd00;
-    --shadow:0 3px 13px var(--primary-dark);
+    --shadow:0 3px 13px var(--dark);
 }
 html{
     height: 100%;
@@ -87,7 +87,7 @@ body {
 .content {
     grid-area: c;
     padding: 2em;
-    background-image: url(/img/fgdfgdfg.JPG);
+    background-image: url(../../img/lfl-bg-9.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
