@@ -33,8 +33,6 @@ body {
     margin: auto;
     max-width: 1280px;
     height: 100%;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
 }
 
 .header {
@@ -51,7 +49,7 @@ body {
 }
 
 .bar {
-    padding: 1em;
+    padding: 0.80em;
     margin: auto;
 }
 
