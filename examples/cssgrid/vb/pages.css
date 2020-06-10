@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary:#00c8ff;
+    --primary-dark:#0084ff;
+    --light:#0dffff;
+    --dark:#0000ff;
+    --cons:#ffcd00;
+    --shadow:0 3px 13px var(--dark);
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background: var(--light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 175px auto;
+    grid-template-areas:
+        'h h h h h h h h h h h h'
+        'c c c c c c c c c c c c'
+        'f f f f f f f f f f f f';
+    justify-items: stretch;
+    align-items: start;
+    margin: auto;
+    max-width: 1280px;
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+    grid-area: h;
+    height: 174px;
+    background: #ffffff;
+    border-bottom: solid 1px var(--primary);
+}
+
+.logo {
+    padding: 1em;
+    border-bottom: var(--primary) 1px solid;
+}
+
+.bar {
+    padding: 0.80em;
+    margin: auto;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    justify-content: stretch;
+    align-items: center;
+    /*display: flex;*/
+}
+
+.menu > li {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: smaller;
+    color: #000000;
+}
+
+.menu a:hover {
+    padding: 0.5em;
+    border:var(--primary) solid 5px;
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+.articles {
+    grid-area: c;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    't t t'
+    's c s';
+    padding: 2em;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.art-title {
+    grid-area: t;
+}
+
+.art-content {
+    grid-area: c;
+}
+
+.footer{
+    grid-area: f;
+    background-color: var(--primary);
+    max-height: 100px;
+    padding: 0.5em;
+}
