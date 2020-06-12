@@ -119,10 +119,30 @@ body {
 
 .art-form {
     grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    padding: 1em;
+    background: #0dffff;
+    width: 100%;
+    margin: auto;
 }
 
+.art-form form {
+    background-color: #ffcd00;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 50%;
+}
+.art-form label{
+    text-align: start;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+.art-form input {
+    padding: 1em;
+}
+.art-form textarea{
+    padding: 1em;
+}
 
 
 

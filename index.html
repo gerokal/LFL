@@ -12,8 +12,8 @@
     <div class="wrapper">
         <div class="header">
             <div class="logo">
-                <a href="/examples/cssgrid/vb/index.html">
-                    <img src="../../../img/lfl.svg" alt="London Futsal League" >
+                <a href="index.html">
+                    <img src="img/lfl.svg" alt="London Futsal League" >
                 </a>
             </div>
             <div class="bar">
@@ -31,11 +31,25 @@
                 <h3>We will find the right team for you </h3>
             </div>
             <div class="art-content">
-                <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhCMOipG9Pm35FFoRy4aQ1212b5Ki7UqE3iQxipDwCRvj_hQ/viewform?embedded=true" width="640" height="844" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
                 <div class="art-form">
-                    <form action="form.php" method="POST">
-                        <label for="Name">Your Name</label>
-                        <input type="text" name="name" id="name">
+                    <script type="text/javascript">var submitted=false;</script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.reload(true) /*='https://www.google.com'*/ ;}"></iframe>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1lwHp8zXZv2KulK9xf5N1teOZ08iFaFXMd_cO-UzPfNBTkQ/formResponse" method="POST" target="hidden_iframe">
+
+                        <label for="name">Your name</label>
+                        <input type="text" id="fname" name="entry.1600116832" placeholder="Your name..">
+                    
+                        <label for="email">Your e-mail</label>
+                        <input type="text" id="email" name="entry.1476556100" placeholder="Your e-mail..">
+                        
+                        <label for="phone">Your phone</label>
+                        <input type="text" id="phone" name="entry.1772019533" placeholder="Your phone..">
+                        
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="entry.1381389848" placeholder="Write some comments.." style="height:200px"></textarea>
+                    
+                        <input type="submit" value="Submit">
+                    
                     </form>
                 </div>
                 <div>
