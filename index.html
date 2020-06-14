@@ -4,69 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LFL | Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-home.css">
     <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container"> -->
     <div class="wrapper">
         <div class="header">
             <div class="logo">
                 <a href="index.html">
                     <img src="img/lfl.svg" alt="London Futsal League" >
                 </a>
+                <h2>London<br>Futsal<br>League</h2>
             </div>
             <div class="bar">
                 <ul class="menu">
-                    <li><a href="#">Fixture</a></li>
-                    <li><a href="#">Results</a></li>
-                    <li><a href="#">Table</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="fixture.html">Fixture</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="table.html">Table</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </div>     
         </div>
-        <div class="articles">
-            <div class="art-title">
-                <h1>Join Solo</h1>
-                <h3>We will find the right team for you </h3>
+        <div class="content">
+            <div class="vb">
+                <video autoplay muted loop
+                    src="video/lfl-vbg.m4v" type="video/m4v">
+                </video>
             </div>
-            <div class="art-content">
-                <div class="art-form">
-                    <script type="text/javascript">var submitted=false;</script>
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.reload(true) /*='https://www.google.com'*/ ;}"></iframe>
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1lwHp8zXZv2KulK9xf5N1teOZ08iFaFXMd_cO-UzPfNBTkQ/formResponse" method="POST" target="hidden_iframe">
-
-                        <label for="name">Your name</label>
-                        <input type="text" id="fname" name="entry.1600116832" placeholder="Your name..">
-                    
-                        <label for="email">Your e-mail</label>
-                        <input type="text" id="email" name="entry.1476556100" placeholder="Your e-mail..">
-                        
-                        <label for="phone">Your phone</label>
-                        <input type="text" id="phone" name="entry.1772019533" placeholder="Your phone..">
-                        
-                        <label for="comments">Comments</label>
-                        <textarea id="comments" name="entry.1381389848" placeholder="Write some comments.." style="height:200px"></textarea>
-                    
-                        <input type="submit" value="Submit">
-                    
-                    </form>
+            <div class="title">
+                <div class="title-bg">
+                    <h1>London Futsal League</h1>
+                    <p>Talk with your feet, play with your heart</p>
                 </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum labore repellat quas provident sequi? Autem ipsa placeat reiciendis temporibus impedit!</p>
+            </div>
+            <div class="social">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+                </ul>
+            </div>
+            <div class="cta">
+                <div id="cta1" class="cta-btn">
+                    <i class="fas fa-futbol fa-3x"></i>
                 </div>
-                <div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugiat maxime optio nesciunt sit quidem.</p>
+                <div id="cta2" class="cta-btn">
+                    <i class="fas fa-user fa-2x"></i>
+                    <a href="solo.html">SOLO REGISTRATION</a>
                 </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, sapiente! Ea rem reprehenderit ipsam laboriosam ullam. Modi corrupti reprehenderit animi?</p>
+                <div id="cta3" class="cta-btn">
+                    <i class="fas fa-users fa-2x"></i>
+                    <a href="#">JOIN WITH YOUR TEAM</a>
+                </div>
+                <div id="cta4" class="cta-btn">
+                    <i class="fas fa-map-marked-alt fa-3x"></i>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita soluta corporis, ullam aspernatur temporibus totam!</div>
-        </div>
-    </div>
+        <!-- <div class="footer">FOOTER</div>-->
+    <!--</div>  end container -->
     </div>
 </body>
 </html>
