@@ -1,0 +1,318 @@
+/* Core Styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 1em 0;
+  }
+  
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+  
+  .btn {
+    background: #ff9b18;
+    color: #000000;
+    text-decoration: none;
+    padding: 1em;
+    border: 1px solid #666;
+    margin: 0.5em;
+  }
+  
+  .btn:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+  
+  /* Header Showcase */
+  
+  /* *** video *** */
+
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0.4;
+  }
+
+  #showcase {
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+  }
+  
+   /* /* #showcase */ .bg-image {
+    position: absolute;
+    background: #850e0e;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    z-index: -1;
+  } */
+  
+  #showcase h1 {
+    padding-top: 3em;
+    padding-bottom: 2em;
+  }
+  
+  #showcase .content-wrap,
+  #section-a .content-wrap {
+    padding: 1em 1.5em;
+  }
+
+  .cta {
+    display: flex;
+    justify-content: space-around;
+  }
+/* *** Logo & Navbar *** */
+
+ /* Style the navigation menu */
+ .topnav {
+  overflow: hidden;
+  background-color: #aff3ff;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: blue;
+  padding: 1.2em;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  color: white;
+} 
+
+.logo {
+  display: flex;
+  justify-content: left;
+  background-color: #ffffff;
+}
+.logo p{
+  padding: 0;
+  font-size: 0.95em;
+  font-weight: bold;
+  text-align: left;
+}
+.logo img {
+  padding-left: 1em;
+  max-width: 2em;
+}
+.logo .lfl-3{
+  display: none;
+}
+/* *** end logo and navbar *** */
+
+  /* Section A */
+  
+  #section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+  }
+  
+  /* Section B */
+  
+  #section-b {
+    padding: 2em 1em 1em;
+  }
+  
+  #section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+  }
+  
+  .card-content {
+    padding: 1.5em;
+  }
+  
+  /* Section C */
+  
+  #section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+  }
+  
+  /* Section D / Boxes */
+  
+  #section-d .box {
+    padding: 2em;
+    color: #fff;
+  }
+  
+  #section-d .box:first-child {
+    background: #2690d4;
+  }
+  
+  /* Footer */
+  
+  #main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #main-footer a {
+    color: #2690d4;
+    text-decoration: none;
+  }
+  
+  /* Media Queries */
+  
+  @media (min-width: 741px) {
+    .topnav {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      grid-column:1/-1;
+      grid-template-areas: 
+      'l l l l'
+      'm m m m';
+      border-bottom: blue 1px solid;
+      height: 205px;
+    }
+    .topnav .logo{
+      grid-area: l;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: blue 1px solid;
+    }
+    .topnav .logo img{
+      max-width: 85px;
+      text-transform: uppercase;
+    }
+    .topnav .logo p{
+      color: blue;
+    }
+    .topnav .logo .lfl-1{
+      display: none;
+    }
+    .topnav .logo .lfl-3{
+      display: block;
+    }
+    .topnav .logo a:hover{
+      background: none;
+    }
+    .topnav a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: black;
+      font-size: 1em;
+    }
+    .topnav a:hover{
+      background: #29d8f7;
+      font-weight: bold;
+    }
+    .topnav a.icon {
+      display: none;
+    }
+    .topnav #myLinks{
+      grid-area: m;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1em;
+      justify-content: stretch;
+      align-items: center;
+      max-height: 50px;     
+    }
+
+
+
+/* *** general styles *** */
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+  
+    #section-a .content-text {
+      columns: 2;
+      column-gap: 2em;
+    }
+  
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+  
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+  
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+  
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    #section-b li {
+      width: 31%;
+    }
+  }
+  
