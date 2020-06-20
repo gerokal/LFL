@@ -54,7 +54,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    top: 0;
+    top: 65px;
     left: 0;
     z-index: -2;
     opacity: 0.4;
@@ -161,6 +161,7 @@ body {
     background: #eaeaea;
     color: #333;
     padding-bottom: 2em;
+    height: 70vh;
   }
   
   /* Section B */
@@ -276,6 +277,10 @@ body {
       justify-content: stretch;
       align-items: center;
       max-height: 50px;     
+    }
+
+    #showcase h1 {
+      font-size: 3em;
     }
 
 
