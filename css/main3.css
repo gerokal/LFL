@@ -59,8 +59,8 @@ p {
   color: var(--dark);
   text-decoration: none;
   padding: 1em;
-  border: 1px solid #666;
-  margin: 0.5em;
+  border: 1px solid #333;
+  margin-top: 1em;
 }
 
 .btn:hover {
@@ -117,7 +117,7 @@ video {
 }
 .cta-text {
   font-weight: bold;
-  color: #000000;
+  color: #333;
 }
 /* *** Logo & Navbar *** */
 
@@ -234,12 +234,33 @@ video {
 }
 
 form{
-  padding: 1em;
+  padding: 2em;
+  justify-content: space-around;
+
 }
-.contact-form input,
-.contact-form textarea{
-  width: 80%;
-  padding: 0.75em;
+.contact-form{/* 
+  background: var(--light); */
+  text-align: left;
+}
+form input{
+  width: 95%;
+  padding: 0.75em 0 ;
+}
+form textarea{
+  padding: 0.5em;
+  width: 95%;
+}
+form label{
+  color: var(--light);
+  padding-bottom: 1em;
+}
+form .btn{
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+}
+.la-in{
+  padding: 0.25em 0;
 }
 
 /* Footer */
@@ -279,7 +300,7 @@ form{
     'l l l l'
     'm m m m';
     border-bottom: blue 1px solid;
-    height: 205px;
+    /* height: 205px; */
   }
   .topnav .logo{
     grid-area: l;
@@ -293,7 +314,7 @@ form{
     text-transform: uppercase;
   }
   .topnav .logo p{
-    color: blue;
+    color: var(--dark);
   }
   .topnav .logo .lfl-1{
     display: none;
@@ -309,6 +330,7 @@ form{
     text-transform: uppercase;
     color: black;
     font-size: 1em;
+    padding: 0.5em;
   }
   .topnav a:hover{
     background: var(--light);
@@ -322,9 +344,12 @@ form{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    height: 50px;
+  }
+  #myLinks a{
+    justify-self: center;
+    padding: 1em;
     text-align: center;
   }
 
