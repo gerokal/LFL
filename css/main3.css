@@ -124,7 +124,7 @@ video {
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color:var(--primary);
+  background-color:var(--light);
   position: relative;
 }
 
@@ -135,7 +135,7 @@ video {
 
 /* Style navigation menu links */
 .topnav a {
-  color: var(--dark);
+  color: var(--primary-dark);
   padding: 1.2em;
   text-decoration: none;
   font-size: 1em;
@@ -188,7 +188,7 @@ video {
 #section-a {
   background: #eaeaea;
   color: #333;
-  padding-bottom: 2em;
+  padding-bottom: 0;
 }
 
 /* Section B */
@@ -233,14 +233,10 @@ video {
   color: #000000;
 }
 
+/* *** form landing *** */
 form{
-  padding: 2em;
-  justify-content: space-around;
-
-}
-.contact-form{/* 
-  background: var(--light); */
-  text-align: left;
+  padding: 0;
+  text-align: center;
 }
 form input{
   width: 95%;
@@ -251,13 +247,16 @@ form textarea{
   width: 95%;
 }
 form label{
-  color: var(--light);
-  padding-bottom: 1em;
+  text-align: left;
+  float: left;
+  padding-left: 0.75em;
+  padding-bottom: 0.5em;
+  color: var(--dark);
 }
 form .btn{
   text-transform: uppercase;
+  font-weight: bold;
   cursor: pointer;
-  width: 100%;
 }
 .la-in{
   padding: 0.25em 0;
@@ -288,9 +287,23 @@ form .btn{
   text-decoration: none;
 }
 
+#main-footer .navbar-foot{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+#main-footer .navbar-foot li > a:hover{
+  background:  cyan;
+  color: black;
+  font-weight: bold;
+  padding: 0.2em 0.5em;
+}
+
 /* Media Queries */
 
 @media (min-width: 741px) {
+  /* *** top navbar *** */
   .topnav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -300,7 +313,7 @@ form .btn{
     'l l l l'
     'm m m m';
     border-bottom: blue 1px solid;
-    /* height: 205px; */
+    max-height: 160px;
   }
   .topnav .logo{
     grid-area: l;
@@ -308,6 +321,7 @@ form .btn{
     align-items: center;
     justify-content: center;
     border-bottom: blue 1px solid;
+    padding: 1em 0;
   }
   .topnav .logo img{
     max-width: 85px;
@@ -329,11 +343,10 @@ form .btn{
     text-decoration: none;
     text-transform: uppercase;
     color: black;
-    font-size: 1em;
-    padding: 0.5em;
+    padding: 0;
   }
   .topnav a:hover{
-    background: var(--light);
+    background: var(--primary);
     font-weight: bold;
   }
   .topnav a.icon {
@@ -346,10 +359,11 @@ form .btn{
     grid-gap: 1em;
     justify-content:center;
     align-items: center;
+
   }
   #myLinks a{
     justify-self: center;
-    padding: 1em;
+    padding: 0.5em;
     text-align: center;
   }
 
@@ -369,7 +383,8 @@ form .btn{
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 1em;
   }
 
   #section-a .content-text {
@@ -383,12 +398,12 @@ form .btn{
 
   .content-wrap,
   #section-b ul {
-    grid-column: 2/4;
+    grid-column: 2/16;
   }
 
   .box,
   #main-footer div {
-    grid-column: span 2;
+    grid-column: span 8;
   }
 
   #section-b ul {
@@ -405,5 +420,54 @@ form .btn{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-gap: 1em;
+  }
+
+  /* *** pages *** */
+
+  /* --- solo registration ---*/
+  #section-a .solo-content{
+    display: grid;
+    grid-template-columns: 12fr 4fr;
+    padding: 0;
+  }
+  .solo-content .content-solo{
+    padding: 2em;
+   /*  display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2em; */
+  }
+  .content-solo .content-left{
+    padding: 2em;
+    border: 1px solid #cccccc;
+  }
+  #form-solo label{
+    text-align: left;
+    float: left;
+    padding-left: 0.75em;
+    padding-bottom: 0.5em;
+    color: var(--dark);
+  }
+
+  .solo-content .content-side{
+    background: #f8f8f8;
+    padding: 0;
+  }
+  .content-side h3{
+    padding: 2em 0;
+  }
+  .content-side .box {
+    padding: 1em;
+  }
+  .box a{
+    color: #d4d4d4;
+  }
+  .content-side .box:nth-of-type(1){
+    background: #d4d4d4;
+  }
+  .content-side .box:nth-of-type(2){
+    background: #f8f8f8;
+  }
+  .content-side .box:nth-of-type(3){
+    background: #d4d4d4;
   }
 }
