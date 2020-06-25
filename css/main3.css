@@ -233,10 +233,10 @@ video {
   color: #000000;
 }
 
-/* *** form landing *** */
+/* *** forms *** */
+
 form{
   padding: 0;
-  text-align: center;
 }
 form input{
   width: 95%;
@@ -251,15 +251,34 @@ form label{
   float: left;
   padding-left: 0.75em;
   padding-bottom: 0.5em;
-  color: var(--dark);
+}
+form .la-in{
+  padding: 1em;
+  background: #f8f8f8;
+  margin: 1em;
 }
 form .btn{
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
 }
-.la-in{
-  padding: 0.25em 0;
+
+fieldset .la-in{
+  padding: 0;
+}
+legend{
+  padding: 0 0.5em;
+  font-weight: bold;
+}
+
+
+/* *** form landing *** */
+
+.form-home form label{
+  color: var(--primary-dark);
+}
+.form-home .la-in{
+  padding: 0.75em;
 }
 
 /* Footer */
@@ -291,6 +310,7 @@ form .btn{
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  padding-bottom: 1em;
 }
 
 #main-footer .navbar-foot li > a:hover{
@@ -381,6 +401,11 @@ form .btn{
 
   /* *** general styles *** */
 
+  .section-title{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -422,52 +447,80 @@ form .btn{
     grid-gap: 1em;
   }
 
-  /* *** pages *** */
+  /* *** pages / sections *** */
 
-  /* --- solo registration ---*/
-  #section-a .solo-content{
+  #section-a .content{
     display: grid;
     grid-template-columns: 12fr 4fr;
     padding: 0;
   }
-  .solo-content .content-solo{
-    padding: 2em;
-   /*  display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 2em; */
+  .content .content-section{
+    padding: 0;
+    background: #ffffff;
   }
-  .content-solo .content-left{
-    padding: 2em;
-    border: 1px solid #cccccc;
-  }
-  #form-solo label{
-    text-align: left;
-    float: left;
-    padding-left: 0.75em;
-    padding-bottom: 0.5em;
-    color: var(--dark);
-  }
-
-  .solo-content .content-side{
-    background: #f8f8f8;
+  .content .content-side{
+    background: #d4d4d4;
     padding: 0;
   }
-  .content-side h3{
-    padding: 2em 0;
+  .content .primary-content,
+  .content .secondary-content{
+    padding: 3em;
   }
-  .content-side .box {
+  .content-side .smf,
+  .content-side .ads {
     padding: 1em;
   }
-  .box a{
-    color: #d4d4d4;
-  }
-  .content-side .box:nth-of-type(1){
-    background: #d4d4d4;
-  }
-  .content-side .box:nth-of-type(2){
+  .content-side .ads {
+    border-top: #dfdfdf 2px solid;
+    padding-top: 2em;
     background: #f8f8f8;
   }
-  .content-side .box:nth-of-type(3){
+  .content-side h3{
+    padding: 1em 0;
+    background: #f8f8f8;
+    font-weight: lighter;
+  }
+  .content-side .smf:nth-of-type(1){
     background: #d4d4d4;
+  }
+
+ /*  .contact-form label{
+    padding-left: 0.75em;
+    padding-bottom: 0.5em;
+    color: var(--primary-dark);
+  } */
+  .rd-btn{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-auto-rows: auto;
+    justify-items: center;
+    justify-content: space-around;
+    padding: 1em 0;
+    justify-items: left;
+  }
+  .rd-btn > div {
+    align-self: center;
+  }
+  .rd-btn > div:nth-child(1){
+    grid-column: span 8;
+  }
+  .rd-btn > div:nth-child(2){
+    grid-column: span 2;
+  }
+  .rd-btn > div:nth-child(3){
+    grid-column: span 2;
+  }
+  .rd-btn > div:nth-child(4){
+    grid-column: span 4;
+  }
+  .rd-btn > div:nth-child(4) label{
+    text-align: center;
+    padding-right: 1em;
+  }
+  .rd-other {
+    display: flex;
+  }
+  .rd-other #otherAnswer{
+    padding: 0 0.25em ;
   }
 }
