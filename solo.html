@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main3.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
       function myFunction() {
         var x = document.getElementById("myLinks");
@@ -16,6 +17,7 @@
         }
       }
     </script>
+    
     <title>LFL | Solo Resgistration </title>
 </head>
 <body>
@@ -56,33 +58,43 @@
             <script type="text/javascript">var submitted=false;</script>
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://www.google.com';}"></iframe>
             <div class="contact-form">
-              <form id="form-solo" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1lwHp8zXZv2KulK9xf5N1teOZ08iFaFXMd_cO-UzPfNBTkQ/formResponse" method="POST" target="hidden_iframe">
+              <form id="form-solo" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfcXfYxSX3wyMXu60trwwXQ6Z3MbvAL_iUiiToCAIk1Ddz0qw/formResponse" method="POST" target="hidden_iframe">
                 <div class="la-in">
-                  <label for="name">Full name</label>
-                  <input type="text" id="fname" name="entry.1600116832" placeholder="Your name..">
+                  <label for="fname">Full name</label>
+                  <input type="text" id="fname" name="entry.2005620554" placeholder="Your name..">
                 </div>
                 <div class="la-in">
                   <label for="email">E-mail</label>
-                  <input type="text" id="email" name="entry.1476556100" placeholder="Your e-mail..">
+                  <input type="text" id="email" name="entry.1045781291" placeholder="Your e-mail..">
                 </div>
                 <div class="la-in">
                   <label for="phone">Phone number</label>
-                  <input type="text" id="phone" name="entry.1772019533" placeholder="Your phone..">
+                  <input type="text" id="phone" name="entry.1065046570" placeholder="Your phone..">
                 </div>
                 <div class="la-in">
-                  <label for="birth">Date of birth</label>
-                  <input type="date" id="dob" name="entry.1772019533" placeholder="Your date of birth..">
+                  <label for="dob">Date of birth</label>
+                  <input type="date" id="dob" name="entry.597836224" placeholder="Your date of birth..">
                 </div>
                 <div class="la-in">
                   <label for="address">Address</label>
-                  <input type="text" id="address" name="entry.1772019533" placeholder="Your address..">
+                  <input type="text" id="address" name="entry.1166974658" placeholder="Your address..">
                 </div>
                 <div class="la-in">
                   <label for="comments">Tell us a bit about yourself</label>
-                  <textarea id="comments" name="entry.1381389848" placeholder="Write something about you.."></textarea>
+                  <textarea id="comments" name="entry.839337160" placeholder="Write something about you.."></textarea>
                 </div>
                 <div>
                   <input class="btn" type="submit" value="Submit">
+                  <div id="confirmation">
+                    <h2>Trank you for registering. We will contact you shortly</h2>
+                    <div>
+                      <ul>
+                        <li><a href="index3.html">Go Home</a></li>
+                        <li><a href="solo.html">Register another player</a></li>
+                        <li><a href="team.html">Register a team</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
@@ -144,6 +156,16 @@
     i.src = "https://cdn.curator.io/published/dd893cd1-9d95-4910-8314-2b3788bb603d.js";
     e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
     })();
+  </script>
+  <script>
+    $(document).ready(function(){
+      $("#form-solo").submit(function(){
+        $("#confirmation").show("slow");
+      });
+      $(".btn").click(function(){
+        $("form-solo").submit();
+      });  
+    });
   </script>
 </body>
 </html>

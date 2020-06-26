@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main3.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
       function myFunction() {
         var x = document.getElementById("myLinks");
@@ -16,33 +16,24 @@
         }
       }
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
-        $("input[type='radio']").change(function(){
-          if($(this).val()=="aff-other"){
-            $("#aff-otherAnswer").focus();
-          }
-          else{
-            $("#aff-otherAnswer").show();
-          }
+        $("input[name=entry-aff]").change(function () {
+          setTimeout(function() {
+            document.getElementById("aff-otherAnswer").focus(); 
+          }, 0)
         });
-        $("input[type='radio']").change(function(){
-          if($(this).val()=="kit-other"){
-            $("#kit-otherAnswer").focus();
-          }
-          else{
-            $("#kit-otherAnswer").show();
-          }
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#form-team").submit(function(){
+          /* alert("Thank you"); */
+          $("#confirmation").show("slow");
         });
-        $("input[type='radio']").change(function(){
-          if($(this).val()=="soc-other"){
-            $("#soc-otherAnswer").focus();
-          }
-          else{
-            $("#aff-otherAnswer").show();
-          }
-        });
+        $(".btn").click(function(){
+          $("form-team").submit();
+        });  
       });
     </script>
     <title>LFL | Team Resgistration </title>
@@ -84,10 +75,12 @@
             <p>Looking for a team to join instead? <a href="solo.html">click here</a></p>
             <h3></h3>
             <div class="contact-form">
-              <form id="form-team" action="">
+              <script type="text/javascript">var submitted=false;</script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.href='https://www.google.com';}"></iframe>
+              <form id="form-team" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdTN6B5D3s2dGTQC_jGereKOLD-eP-c88dTKmBXRE5GDm4_hA/formResponse" method="POST" target="hidden_iframe">
                 <div class="la-in">
                   <label for="tname">Team name</label>
-                  <input type="text" id="tname" name="entry.1600116832" placeholder="Team name..">
+                  <input type="text" id="tname" name="entry.2005620554" placeholder="Team name..">
                 </div>
                 <div class="rd-btn la-in">
                   <div>
@@ -95,17 +88,17 @@
                   </div>
                   <div>
                     <label for="aff-yes">
-                      <input type="radio" id="aff-yes" name="entry.aff" value="aff-yes">Yes
+                      <input type="radio" id="aff-yes" name="entry.1040388788" value="aff-yes">Yes
                     </label>
                   </div>
                   <div>
                     <label for="aff-no">
-                      <input type="radio" id="aff-no" name="entry.aff" value="aff-no">No
+                      <input type="radio" id="aff-no" name="entry.1040388788" value="aff-no">No
                     </label>  
                   </div>
                   <div class="rd-other">
                     <label for="aff-other"><input type="radio" id="aff-other" name="entry.aff" value="aff-other">Other</label>
-                    <input type="text" id="aff-otherAnswer" name="entry.aff-otherAnswer" placeholder="other">
+                    <input type="text" id="aff-otherAnswer" name="entry.1040388788" placeholder="other">
                   </div>
                 </div>
                 <div class="rd-btn la-in">
@@ -114,17 +107,17 @@
                   </div>
                   <div>
                     <label for="kit-yes">
-                      <input type="radio" id="kit-yes" name="entry.kit" value="kit-yes">Yes
+                      <input type="radio" id="kit-yes" name="entry.1986559684" value="kit-yes">Yes
                     </label>
                   </div>
                   <div>
                     <label for="kit-no">
-                      <input type="radio" id="kit-no" name="entry.kit" value="kit-no">No
+                      <input type="radio" id="kit-no" name="entry.1986559684" value="kit-no">No
                     </label>  
                   </div>
                   <div class="rd-other">
                     <label for="kit-other"><input type="radio" id="kit-other" name="entry.kit" value="kit-other">Other</label>
-                    <input type="text" id="kit-otherAnswer" name="entry.kit-otherAnswer" placeholder="other">
+                    <input type="text" id="kit-otherAnswer" name="entry.1986559684" placeholder="other">
                   </div>
                 </div>
                 <div class="rd-btn la-in">
@@ -133,52 +126,62 @@
                   </div>
                   <div>
                     <label for="soc-ins">
-                      <input type="radio" id="soc-ins" name="entry.soc" value="soc-ins">Instagram
+                      <input type="radio" id="soc-ins" name="entry.1038359009" value="soc-ins">Instagram
                     </label>
                   </div>
                   <div>
                     <label for="soc-fac">
-                      <input type="radio" id="soc-fac" name="entry.soc" value="soc-fac">Facebook
+                      <input type="radio" id="soc-fac" name="entry.1038359009" value="soc-fac">Facebook
                     </label>  
                   </div>
                   <div class="rd-other">
                     <label for="soc-other"><input type="radio" id="soc-other" name="entry.soc" value="soc-other">Other</label>
-                    <input type="text" id="soc-otherAnswer" name="entry.soc-otherAnswer" placeholder="other">
+                    <input type="text" id="soc-otherAnswer" name="entry.1038359009" placeholder="other">
                   </div>
                 </div>
                 <div class="la-in">
                   <label for="tcb">Team has compited before. (if so, please explain.)</label>
-                  <input type="text" id="tcb" name="entry.1772019533" placeholder="State if your team has compited before..">
+                  <input type="text" id="tcb" name="entry.895823384" placeholder="State if your team has compited before..">
                 </div>
                 <fieldset class="la-in">
                   <legend>Person in charge</legend>
                   <div class="la-in">
                     <label for="pic-name">Full name</label>
-                    <input type="text" id="pic-phone" name="entry.1772019533" placeholder="Person in charge full name..">
+                    <input type="text" id="pic-phone" name="entry.561946750" placeholder="Person in charge full name..">
                   </div>
                   <div class="la-in">
                     <label for="pic-email">E-mail</label>
-                    <input type="text" id="pic-email" name="entry.1772019533" placeholder="Person in charge email..">
+                    <input type="text" id="pic-email" name="entry.1045781291" placeholder="Person in charge email..">
                   </div>
                   <div class="la-in">
                     <label for="pic-phone">Phone number</label>
-                    <input type="text" id="pic-phone" name="entry.1772019533" placeholder="Person in charge phone..">
+                    <input type="text" id="pic-phone" name="entry.1166974658" placeholder="Person in charge phone..">
                   </div>
                   <div class="la-in">
                     <label for="pic-address">Address</label>
-                    <input type="text" id="pic-address" name="entry.1772019533" placeholder="Person in charge address..">
+                    <input type="text" id="pic-address" name="entry.1065046570" placeholder="Person in charge address..">
                   </div>
                 </fieldset>
                 <div class="la-in">
                   <label for="spic">Second person in charge (full name, phone and e-mail)</label>
-                  <input type="text" id="spic" name="entry.1772019533" placeholder="Secon person in charge details..">
+                  <input type="text" id="spic" name="entry.72655636" placeholder="Secon person in charge details..">
                 </div>
                 <div class="la-in">
                   <label for="comments">Brief description and history of your team.</label>
-                  <textarea id="comments" name="entry.1381389848" placeholder="Write something about your team.."></textarea>
+                  <textarea id="comments" name="entry.839337160" placeholder="Write something about your team.."></textarea>
                 </div>
                 <div>
                   <input class="btn" type="submit" value="Submit">
+                  <div id="confirmation">
+                    <h2>Trank you for registering. We will contact you shortly</h2>
+                    <div>
+                      <ul>
+                        <li><a href="index3.html">Go Home</a></li>
+                        <li><a href="team.html">Register another team</a></li>
+                        <li><a href="solo.html">Register a player</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
