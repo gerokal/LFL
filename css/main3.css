@@ -209,10 +209,6 @@ video {
   color: #333;
 }
 
-.card-content {
-  padding: 1.5em;
-}
-
 /* Section C */
 
 #section-c {
@@ -269,6 +265,15 @@ fieldset .la-in{
 legend{
   padding: 0 0.5em;
   font-weight: bold;
+}
+
+.card{
+  padding: 0;
+  background: #f8f8f8;
+  margin: 1em 0;
+}
+.card-content {
+  padding: 2em;
 }
 
 /* *** Success message *** */
@@ -460,6 +465,7 @@ legend{
 
   #section-b li {
     width: 31%;
+    background: #f8f8f8;
   }
 
   #section-c .results {
