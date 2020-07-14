@@ -1,0 +1,259 @@
+/* *** Core Styles *** */
+* {
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary:#00c8ff;
+    --primary-dark:#0084ff;
+    --light:#0dffff;
+    --dark:#0000ff;
+    --cons:#ffcd00;
+    --shadow:0 3px 13px var(--dark);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    background: #f0f0f0;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    background: #ffffff;
+}
+.cuerpo{
+    padding: 0 2em;
+}
+main{
+    margin-top: 2em;
+}
+.hero{
+    background: #ffffff;
+    position: relative;
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-title {
+    width: 100%;
+    position: absolute;
+    bottom: 0.4em;
+    left: 0;
+    background-color: #00AEFD;
+    opacity: 0.75;
+    padding: 1.5em 0;
+    color: #fff;
+    text-align: left;
+}
+.hero-title h1{
+    font-size: 2.5em;
+    padding-left: 0.75em;
+}
+.hero-title p{
+    padding-left: 2em;
+}
+
+.social{
+    position: absolute;
+    bottom: -0.3em;
+    right: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+.social ul li{
+    list-style: none;
+    margin: 0.5em 0;
+}
+.social ul li a{
+    color: #ffffff;
+}
+
+.cta{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin: 2.5em 0;
+}
+.cta-box{
+    background: #ffffff;
+    padding: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.cta-box:hover{
+    transition: 0.5s;
+    background: #c2e3ff;
+    color: var(--dark);
+}
+.cta-box h2{
+    color: #363636;
+}
+
+
+/* *** Navbar *** */
+
+header{
+    position: relative;
+    margin: 0 -2em;
+    padding: 0 2em;
+    background: #ffffff;
+    border-bottom: 0.1em solid #cccccc;
+}
+#lfl-logo{
+    max-height: 5em;
+    float: left;
+    padding: 1em 0;
+}
+nav{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    margin: 0;
+    padding:2.84em 1.5em;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    border-bottom: 0.1em solid #111111;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+/* *** FOOTER *** */
+
+footer {
+    padding: 2em;
+    background: #00AEFD;
+    color: #fff;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+}
+
+
+
+
+@media (max-width: 768px){
+    header{
+        padding-bottom: 0.7em;
+        margin: 0 -0.5em;
+    }
+    .toggle{
+        display: block;
+        width: 1.25em;
+        height: 1.25em;
+        margin:1em 0.3em;
+        float:right;
+        cursor: pointer;
+        /* background: #b3b3b3; */
+        text-align: center;
+        font-size: 2em;
+        color: #444444;
+    }
+    .toggle::before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 1.25em;
+    }
+    .toggle.active::before{
+        content: '\f00d';
+    }
+    nav{
+        display: none;
+    }
+    nav.active{
+        display: block;
+        width: 100%;
+        border-top: solid 1px #cccccc;
+        margin-top: 1em;
+    }
+    nav.active ul{
+        display: block;
+    }
+    nav.active ul li a{
+        margin: 0;
+    }
+
+/* *** en nav *** */
+
+    main{
+        margin-top: 1em;
+    }
+
+    .container{
+        padding: 0;
+    }
+    .cuerpo{
+        padding: 0 0.5em;
+    }
+    .hero{
+        padding-bottom: 5.3em;
+    }
+    .hero-title {
+        width: 100%;
+        position: absolute;
+        bottom: -1em;
+        background-color: #00AEFD;
+        padding: 1.5em 0;
+        color: #fff;
+        text-align: left;
+    }
+
+    .hero-title h1{
+        font-size: 1.5em;
+    }
+    .hero-title p{
+        font-size: 1em;
+        padding-left: 1.1em;
+    }
+
+    /* *** CTA *** */
+    .cta{
+        display: block;
+        margin-top: 1em;
+    }
+    .cta-box{
+        margin: 0.5em 0;
+    }
+    .cta-box h2{
+        font-size: 1.5em;
+        line-height: 1.25em;
+    }
+
+    .social{
+        bottom: -1.5em;
+        right: 0;
+    }
+    .social ul li{
+        margin: 0;
+    }
+    
+
+    footer{
+        display: block;
+    }
+}
