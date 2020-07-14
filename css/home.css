@@ -27,8 +27,57 @@ body {
     padding: 0 2em;
 }
 main{
-    margin-top: 2em;
+    margin: 2em 0 0 0;
 }
+
+/* *** NAVBAR *** */
+
+header{
+    position: relative;
+    margin: 0 -2em;
+    padding: 0 2em;
+    background: #ffffff;
+    border-bottom: 0.1em solid #cccccc;
+}
+#lfl-logo{
+    max-height: 5em;
+    float: left;
+    padding: 1em 0;
+}
+nav{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    margin: 0;
+    padding:2.84em 1.5em;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+nav ul li a.active,
+nav ul li a:hover{
+    border-bottom: 0.1em solid #111111;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+/* *** END NAVBAR *** */
+
+/* *** HERO SECTION *** */
+
 .hero{
     background: #ffffff;
     position: relative;
@@ -97,49 +146,90 @@ video{
     color: #363636;
 }
 
+/* *** END HERO SECTION */
 
-/* *** Navbar *** */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    's s s s a a';
+    gap: 2em;
+}
+#section{
+    grid-area: s;
+}
+.section-content{
+    padding:0 2em;
+}
+.section-title {
+    background: #00AEFD;
+    margin:0 -2em 2em -2em;
+    padding: 2em;
+    color: #ffffff;
+    text-align: left;
+}
+.section-title h1{
+    font-size: 2em;
+    margin: 0 0 0.75em 0;
+}
 
-header{
-    position: relative;
-    margin: 0 -2em;
-    padding: 0 2em;
-    background: #ffffff;
-    border-bottom: 0.1em solid #cccccc;
+aside{
+    grid-area: a;
+    background: #eeeeee;
 }
-#lfl-logo{
-    max-height: 5em;
-    float: left;
-    padding: 1em 0;
+
+/* *** forms *** */
+
+form{
+  padding: 0;
 }
-nav{
-    float: right;
+form input{
+  width: 95%;
+  padding: 0.75em 0 ;
 }
-.clearfix{
-    clear: both;
+form textarea{
+  padding: 0.5em;
+  width: 95%;
 }
-nav ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
+form label{
+  text-align: left;
+  float: left;
+  padding-left: 0.75em;
+  padding-bottom: 0.5em;
 }
-nav ul li{
-    list-style: none;
+form .la-in{
+  padding: 1em;
+  background: #f8f8f8;
+  margin: 1em;
 }
-nav ul li a{
-    display: block;
-    margin: 0;
-    padding:2.84em 1.5em;
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
+form .btn{
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
 }
-nav ul li a.active,
-nav ul li a:hover{
-    border-bottom: 0.1em solid #111111;
-    font-weight: 500;
-    transition: 0.5s;
+
+/* *** Success message *** */
+#confirmation{
+  display: none;
+  margin:3em 1em;
+  padding: 1em;
+  background: #a5ffa5;
+  font-size: 200;
+}
+#confirmation ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+#confirmation a{
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+#confirmation a:hover{
+  font-weight: bold;
+  color: var(--dark);
+  background: var(--light);
+  padding: 0.5em;
 }
 
 /* *** FOOTER *** */
@@ -158,6 +248,7 @@ footer {
 
 
 @media (max-width: 768px){
+    /* *** HEADER *** */
     header{
         padding-bottom: 0.7em;
         margin: 0 -0.5em;
@@ -198,10 +289,11 @@ footer {
         margin: 0;
     }
 
-/* *** en nav *** */
+    /* *** END HEADER *** */
 
     main{
         margin-top: 1em;
+        display: block;
     }
 
     .container{
@@ -210,6 +302,9 @@ footer {
     .cuerpo{
         padding: 0 0.5em;
     }
+
+    /* *** HERO SECTION *** */
+
     .hero{
         padding-bottom: 5.3em;
     }
@@ -222,7 +317,6 @@ footer {
         color: #fff;
         text-align: left;
     }
-
     .hero-title h1{
         font-size: 1.5em;
     }
@@ -230,6 +324,15 @@ footer {
         font-size: 1em;
         padding-left: 1.1em;
     }
+
+    .social{
+        bottom: -1.5em;
+        right: 0;
+    }
+    .social ul li{
+        margin: 0;
+    }
+
 
     /* *** CTA *** */
     .cta{
@@ -242,16 +345,7 @@ footer {
     .cta-box h2{
         font-size: 1.5em;
         line-height: 1.25em;
-    }
-
-    .social{
-        bottom: -1.5em;
-        right: 0;
-    }
-    .social ul li{
-        margin: 0;
-    }
-    
+    }    
 
     footer{
         display: block;
