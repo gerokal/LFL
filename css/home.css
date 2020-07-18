@@ -12,7 +12,7 @@
     --shadow:0 3px 13px var(--dark);
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: 1.5;
     text-align: center;
     background: #f0f0f0;
@@ -92,8 +92,7 @@ video{
     position: absolute;
     bottom: 0.4em;
     left: 0;
-    background-color: #00AEFD;
-    opacity: 0.75;
+    background-color:rgba(0, 174, 253, .75);
     padding: 1.5em 0;
     color: #fff;
     text-align: left;
@@ -120,7 +119,9 @@ video{
 .social ul li a{
     color: #ffffff;
 }
+/* *** END HERO SECTION */
 
+/* *** CTA *** */
 .cta{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -139,15 +140,15 @@ video{
 
 .cta-box:hover{
     transition: 0.5s;
-    background: #c2e3ff;
+    background: #beebff;
     color: var(--dark);
 }
 .cta-box h2{
     color: #363636;
 }
+/* *** END CTA *** */
 
-/* *** END HERO SECTION */
-
+/* *** CORE LAYOUT *** */
 .grid{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -162,75 +163,38 @@ video{
     padding:0 2em;
 }
 .section-title {
-    background: #00AEFD;
+    background: #beebff;
     margin:0 -2em 2em -2em;
-    padding: 2em;
-    color: #ffffff;
-    text-align: left;
+    padding: 1em;
+    color: #444444;
 }
 .section-title h1{
     font-size: 2em;
-    margin: 0 0 0.75em 0;
 }
 
 aside{
     grid-area: a;
     background: #eeeeee;
 }
-
-/* *** forms *** */
-
-form{
-  padding: 0;
-}
-form input{
-  width: 95%;
-  padding: 0.75em 0 ;
-}
-form textarea{
-  padding: 0.5em;
-  width: 95%;
-}
-form label{
-  text-align: left;
-  float: left;
-  padding-left: 0.75em;
-  padding-bottom: 0.5em;
-}
-form .la-in{
-  padding: 1em;
-  background: #f8f8f8;
-  margin: 1em;
-}
-form .btn{
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
+.aside-title{
+    background: #dddddd;
+    margin: 0 -1em 1.5em -1em;
+    padding: 1.65em;
+    color: #444444;
 }
 
-/* *** Success message *** */
-#confirmation{
-  display: none;
-  margin:3em 1em;
-  padding: 1em;
-  background: #a5ffa5;
-  font-size: 200;
+.aside-content{
+    padding: 0 1em;
+    padding-bottom: 2em;
 }
-#confirmation ul{
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
+.feed{
+    margin-bottom: 1em;
 }
-#confirmation a{
-  color: var(--primary-dark);
-  text-decoration: none;
+.ads img{
+    width: 100%;
 }
-#confirmation a:hover{
-  font-weight: bold;
-  color: var(--dark);
-  background: var(--light);
-  padding: 0.5em;
-}
+/* *** END CORE LAYOUT *** */
+
 
 /* *** FOOTER *** */
 
@@ -312,7 +276,7 @@ footer {
         width: 100%;
         position: absolute;
         bottom: -1em;
-        background-color: #00AEFD;
+        background-color:rgba(0, 174, 253, 1);
         padding: 1.5em 0;
         color: #fff;
         text-align: left;
@@ -345,7 +309,24 @@ footer {
     .cta-box h2{
         font-size: 1.5em;
         line-height: 1.25em;
-    }    
+    }
+    
+    
+    /* *** PAGES SECTION LAYOUT */
+
+    .grid{
+        display: block;
+    }
+    #section{
+        margin-bottom: 2em;
+    }
+    .section-title{
+        margin: 1em 0;
+    }
+    .section-content{
+        padding: 0 1em;
+        margin: 0 auto;
+    }
 
     footer{
         display: block;
