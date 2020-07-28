@@ -4,35 +4,35 @@
     padding: 0;
 }
 
+form .la-in{
+  padding: 2em;
+  background: #eeeeee;
+  margin: 1em 0;
+}
+
 form input, form textarea{
   width: 100%;
   padding: 0.75em 0.5em;
-  margin: auto -1em;
+  margin: 0 -1em;
 }
 form label{
   text-align: left;
   float: left;
-  margin-left: -0.5em;
   padding-bottom: 0.5em;
 }
-form .la-in{
-  padding: 2em;
-  background: #eeeeee;
-  margin: 1em -2em;
-}
+
 form .btn{
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  margin:1em 0 3em 0;
+  margin:0 0 2em 0;
   padding: 1em;
   background: #beebff;
-  border: none;/* 
-  width: 100%; */
+  border: none;
 }
 
 fieldset .la-in{
-  padding: 0 2em;
+  padding: 0 ;
 }
 legend{
   padding: 0 0.5em;
@@ -43,7 +43,7 @@ legend{
 /* *** Success message *** */
 #confirmation{
   display: none;
-  margin:0 -2em 2em -2em;
+  margin:0 0 2em 0;
   padding: 1em;
   background: #bbffbb;
   font-size: 200;
@@ -96,11 +96,4 @@ display: flex;
 }
 .rd-other #otherAnswer{
 padding: 0 0.25em ;
-}
-
-@media (max-width: 768px){
-    .contact-form{
-        padding: 2em;
-    }
-    
 }

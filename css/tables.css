@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-spacing: 0;
+}
+table ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+table td{
+  border-bottom: solid 1px var(--primary);
+  padding: 0.5em;
+}
+tr:hover{
+  background: #eeeeee;
+}
+th, tfoot td {
+  padding: 0.5em;
+  background: #dddddd;
+}
+

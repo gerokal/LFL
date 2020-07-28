@@ -4,12 +4,12 @@
     padding: 0;
 }
 :root{
-    --primary:#00c8ff;
+    /* --primary:#00c8ff;
     --primary-dark:#0084ff;
     --light:#0dffff;
     --dark:#0000ff;
-    --cons:#ffcd00;
-    --shadow:0 3px 13px var(--dark);
+    --cons:#ffcd00; */
+    --shadow:0 3px 13px #444444;
 }
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -159,17 +159,22 @@ video{
 #section{
     grid-area: s;
 }
-.section-content{
-    padding:0 2em;
+.section-wraper{
+    padding:0;
 }
 .section-title {
     background: #beebff;
-    margin:0 -2em 2em -2em;
     padding: 1em;
     color: #444444;
 }
 .section-title h1{
     font-size: 2em;
+}
+.section-content{
+    padding: 2em;
+}
+.card {
+    margin:0 0 2em 0;
 }
 
 aside{
@@ -193,6 +198,7 @@ aside{
 .ads img{
     width: 100%;
 }
+
 /* *** END CORE LAYOUT *** */
 
 
