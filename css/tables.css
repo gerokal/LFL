@@ -10,7 +10,7 @@ table ul{
   justify-content: space-around;
 }
 table td{
-  border-bottom: solid 1px var(--primary);
+  border-bottom: solid 1px #dddddd;
   padding: 0.5em;
 }
 tr:hover{

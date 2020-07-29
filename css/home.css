@@ -173,8 +173,36 @@ video{
 .section-content{
     padding: 2em;
 }
+
+.content-subheading{
+    margin: 2em 0 1em 0;
+}
 .card {
     margin:0 0 2em 0;
+    padding:0 0 2em 0;
+    border-bottom: 2px solid #dddddd;
+}
+.card img{
+    width: 100%;
+}
+.player-card{
+  display: flex;
+  align-items: center;
+}
+.card-flex{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    align-items: center;
+}
+.card-flex li{
+    padding: 1em;
+}
+
+#top-scorers img{
+  max-width: 2.5em;
+  padding-right: 1em;
 }
 
 aside{
@@ -332,6 +360,13 @@ footer {
     .section-content{
         padding: 0 1em;
         margin: 0 auto;
+    }
+
+    .card-flex{
+        display: block;
+    }
+    .card-flex li{
+        padding: 0;
     }
 
     footer{

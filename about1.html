@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main3.css">
+    <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "inline-block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "inline-block";
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#form-team").submit(function(){
+          /* alert("Thank you"); */
+          $("#confirmation").show("slow");
+        });
+        $(".btn").click(function(){
+          $("form-team").submit();
+        });  
+      });
+    </script>
+    <title>LFL | About </title>
+</head>
+<body>
+    <!-- Header Showcase -->
+  <header class="grid">
+    <div class="topnav">
+      <div class="logo">
+        <img src="img/lfl.svg" alt="">
+        <a href="index.html" class="active">
+          <p class="lfl-1">London Futsal League</p>
+          <p class="lfl-3">London<br>Futsal<br>League</p>
+        </a>
+      </div>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="fixture.html">Fixture</a>
+        <a href="results.html">Results</a>
+        <a href="table.html">Table</a>
+        <a href="teams.html">Teams</a>
+        <a href="about.html">About</a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>            
+    </div>
+  </header>
+  
+  <!-- Main Area -->
+  <main id="main">
+    <!-- Section A -->
+    <section id="section-a" class="grid">
+      <div class="content-wrap content">
+        <div class="content-section">
+          <div class="primary-content">
+            <h2 class="section-title">About London Futsal League</h2>
+            <h4>Know more about LFL</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, accusantium!</p>
+            <div class="card">
+              <h2>Who we are</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iste ea nulla velit obcaecati. Repudiandae omnis ipsa est tempora quaerat.</p>
+              <div id="section-b" class="grid" >
+                  <ul>
+                      <li>
+                          <div class="card">
+                              <img src="img/lfl-bg-8.jpg" alt="Person 1">
+                              <div class="card-content">
+                              <h3 class="card-title">Person 1</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, asperiores.</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="card">
+                              <img src="img/lfl-bg-11.jpg" alt="Person 2">
+                              <div class="card-content">
+                              <h3 class="card-title">Person 2</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aliquam?</p>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="card">
+                              <img src="img/lfl-bg-1.jpg" alt="Person 3">
+                              <div class="card-content">
+                              <h3 class="card-title">Person 3</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, vel.</p>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="secondary-content">
+            <h2 >Our Mission, Vision and Values</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, architecto.</p>
+            <div class="card">
+              <div class="card-secondary">
+              <img src="img/lfl-bg-5.jpg" alt="Mission">
+              <div>
+                <h3>Mission</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aperiam laborum optio, placeat consectetur quibusdam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum explicabo iusto tempora obcaecati amet?</p>
+              </div>
+              </div>
+              <div class="card-secondary">
+                <img src="img/lfl-bg-2.jpg" alt="Vision">
+                <div>
+                  <h3>Vision</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aperiam laborum optio, placeat consectetur quibusdam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aperiam.</p>
+                </div>
+              </div>
+              <div class="card-secondary">
+                <img src="img/lfl-bg-13.jpg" alt="Values">
+                <div>
+                  <h3>Values</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aperiam laborum optio, placeat consectetur quibusdam.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis dolor praesentium obcaecati eligendi laudantium deserunt sunt blanditiis iusto itaque.</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="content-side">
+          <h3>Social Media Feed</h3>
+          <div id="curator-feed-default-feed-layout" class="smf">
+            <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+          </div>
+          <div class="ads">
+            <!-- <h4>Ads</h4>
+            <img src="img/lfl-bg-4.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Side Area -->
+  </main>
+
+  
+
+  <!-- Footer -->
+  <footer id="main-footer" class="grid">
+    <div class="social">
+      <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram-square fa-2x"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+      </ul>
+      <p>Follow us on our social media channels</p>
+    </div>
+    <div>
+      <ul class="navbar-foot">
+        <li><a href="index.html">Home</a></li>
+        <li> | </li>
+        <li><a href="fixture.html">Fixture</a></li>
+        <li> | </li>
+        <li><a href="results.html">Results</a></li>
+        <li> | </li>
+        <li><a href="teams.html">Teams</a></li>
+        <li> | </li>
+        <li><a href="table.html">Table</a></li>
+        <li> | </li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <p>&copy; 2020 | London Futsal League</p>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    /* curator-feed-default-feed-layout */
+    (function(){
+    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+    i.src = "https://cdn.curator.io/published/dd893cd1-9d95-4910-8314-2b3788bb603d.js";
+    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+    })();
+  </script>
+</body>
+</html>
