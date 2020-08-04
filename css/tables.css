@@ -20,4 +20,25 @@ th, tfoot td {
   padding: 0.5em;
   background: #dddddd;
 }
+tfoot ul{
+  font-size: 0.75em;
+}
+.team, .points, .position{
+  font-weight: normal;
+}
+.player p, .goals-f{
+  font-weight: bold;
+}
 
+
+@media (max-width: 768px){
+  .won, .draw, .lost, .goal-f, .goal-a, .goal-d, .captions {
+    display: none;
+  }
+  tbody td i{
+    max-width: 5em;
+  }
+ .p-team{
+    display: none;
+  }
+}

@@ -4,18 +4,34 @@
     padding: 0;
 }
 :root{
-    /* --primary:#00c8ff;
-    --primary-dark:#0084ff;
-    --light:#0dffff;
-    --dark:#0000ff;
-    --cons:#ffcd00; */
+    --primary:#00aefd;
+    --primary-light: #beebff;
+    --primary-dark:#0000ff;
+    --primary-transparent:rgba(0, 174, 253, 0.75);
+    --secondary: #eeeeee;
+    --secondary-dark: #dddddd;
+    --secondary-light: #f0f0f0;
+    --text-dark:#363636;
     --shadow:0 3px 13px #444444;
 }
 body {
     font-family: 'Ubuntu', sans-serif;
-    line-height: 1.5;
+    line-height: 1.5em;
     text-align: center;
-    background: #f0f0f0;
+    background: var(--secondary-light);
+    font-weight: lighter;
+}
+p{
+    text-align: left;
+    line-height: 1.8em;
+    font-weight: lighter;
+}
+a{
+    text-decoration: none;
+    color: var(--primary);
+}
+a:hover{
+    font-weight: normal;
 }
 .container{
     max-width: 1280px;
@@ -37,7 +53,7 @@ header{
     margin: 0 -2em;
     padding: 0 2em;
     background: #ffffff;
-    border-bottom: 0.1em solid #cccccc;
+    border-bottom: 0.1em solid var(--secondary-dark);
 }
 #lfl-logo{
     max-height: 5em;
@@ -62,16 +78,16 @@ nav ul li{
 nav ul li a{
     display: block;
     margin: 0;
-    padding:2.84em 1.5em;
+    padding:2.75em 1em;
     text-decoration: none;
-    color: black;
+    color: #000000;
     text-transform: uppercase;
 }
 nav ul li a.active,
 nav ul li a:hover{
-    border-bottom: 0.1em solid #111111;
-    font-weight: 500;
-    transition: 0.5s;
+    border-bottom: 0.1em solid #000000;
+    text-decoration: none;
+    font-weight: normal;
 }
 
 /* *** END NAVBAR *** */
@@ -87,30 +103,36 @@ video{
     height: 100%;
 }
 
-.hero-title {
+.hero-title-wrapper{
+    display: flex;
     width: 100%;
     position: absolute;
     bottom: 0.4em;
     left: 0;
-    background-color:rgba(0, 174, 253, .75);
-    padding: 1.5em 0;
-    color: #fff;
+    background-color: var(--primary-transparent);
+    color: #ffffff;
     text-align: left;
+    align-items: center;
+}
+.hero-title {
+    width: 80%;
 }
 .hero-title h1{
     font-size: 2.5em;
     padding-left: 0.75em;
+    margin-bottom: 0.25em;
 }
 .hero-title p{
-    padding-left: 2em;
+    padding-left: 1.5em;
+    font-size: 1.25em;
 }
 
 .social{
-    position: absolute;
-    bottom: -0.3em;
-    right: 0.5em;
-    padding: 0.5em;
+    width: 20%;
     border-radius: 0.5em;
+    text-align: right;
+    margin-right: 0.5em;
+    padding: 0.5em;
 }
 .social ul li{
     list-style: none;
@@ -134,17 +156,17 @@ video{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: var(--primary-dark);
+    color: var(--primary);
     text-decoration: none;
 }
 
 .cta-box:hover{
     transition: 0.5s;
-    background: #beebff;
-    color: var(--dark);
+    background: var(--primary-light);
+    color: var(--primary-dark);
 }
 .cta-box h2{
-    color: #363636;
+    color: var(--text-dark);
 }
 /* *** END CTA *** */
 
@@ -163,9 +185,9 @@ video{
     padding:0;
 }
 .section-title {
-    background: #beebff;
-    padding: 1em;
-    color: #444444;
+    background: var(--primary-light);
+    padding: 1.5em;
+    color: var(--text-dark);
 }
 .section-title h1{
     font-size: 2em;
@@ -180,7 +202,7 @@ video{
 .card {
     margin:0 0 2em 0;
     padding:0 0 2em 0;
-    border-bottom: 2px solid #dddddd;
+    border-bottom: 2px solid var(--secondary-dark);
 }
 .card img{
     width: 100%;
@@ -194,31 +216,33 @@ video{
     display: flex;
     justify-content: space-around;
     text-align: left;
-    align-items: center;
 }
 .card-flex li{
     padding: 1em;
 }
-
-#top-scorers img{
+.content-flex{
+    flex-basis: 100%;
+    margin: 1em;
+}
+#top-scorers img, #top-scorers i{
   max-width: 2.5em;
   padding-right: 1em;
 }
 
 aside{
     grid-area: a;
-    background: #eeeeee;
+    background: var(--secondary);
 }
 .aside-title{
-    background: #dddddd;
+    background: var(--secondary-dark);
     margin: 0 -1em 1.5em -1em;
-    padding: 1.65em;
-    color: #444444;
+    padding: 1.5em;
+    color: var(--text-dark);
 }
 
 .aside-content{
     padding: 0 1em;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 .feed{
     margin-bottom: 1em;
@@ -234,14 +258,26 @@ aside{
 
 footer {
     padding: 2em;
-    background: #00AEFD;
-    color: #fff;
+    background:var(--primary);
+    color: #ffffff;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-around;
 }
 
+.icon-foot{
+    float: left;
+    margin-right: 0.5em;
+}
+footer img{
+    max-width: 2em;
+    background: #ffffff;
+    border-radius: 2px;
+}
+footer a{
+    color: var(--secondary-light);
+}
 
 
 
@@ -261,7 +297,7 @@ footer {
         /* background: #b3b3b3; */
         text-align: center;
         font-size: 2em;
-        color: #444444;
+        color: var(--text-dark);
     }
     .toggle::before{
         content: '\f0c9';
@@ -277,7 +313,7 @@ footer {
     nav.active{
         display: block;
         width: 100%;
-        border-top: solid 1px #cccccc;
+        border-top: solid 1px var(--secondary-dark);
         margin-top: 1em;
     }
     nav.active ul{
@@ -304,38 +340,39 @@ footer {
     /* *** HERO SECTION *** */
 
     .hero{
-        padding-bottom: 5.3em;
+        padding-bottom: 5em;
     }
-    .hero-title {
-        width: 100%;
-        position: absolute;
-        bottom: -1em;
-        background-color:rgba(0, 174, 253, 1);
+    .hero-title-wrapper {
+        bottom: -3em;
+    }
+    .hero-title{
+        width: 90%;
         padding: 1.5em 0;
-        color: #fff;
-        text-align: left;
     }
     .hero-title h1{
-        font-size: 1.5em;
+        font-size: 1.75em;
+        line-height: 1em;
+        margin-bottom: 0.5em;
     }
     .hero-title p{
         font-size: 1em;
-        padding-left: 1.1em;
+        line-height: 1.2em;
+        padding-left: 1.2em;
     }
 
     .social{
-        bottom: -1.5em;
-        right: 0;
+        margin-right: 0.5em;
+        width:10%;
     }
     .social ul li{
-        margin: 0;
+        margin: 0.25em 0;
     }
 
 
     /* *** CTA *** */
     .cta{
         display: block;
-        margin-top: 1em;
+        margin-top: 4em;
     }
     .cta-box{
         margin: 0.5em 0;
@@ -371,5 +408,9 @@ footer {
 
     footer{
         display: block;
+    }
+    footer div{
+        text-align: center;
+        margin: 1em auto;
     }
 }
