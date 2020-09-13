@@ -9,16 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "inline-block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "inline-block";
-        }
-      }
-    </script>
     <title>LFL | About Us </title>
 </head>
 <body>
@@ -61,35 +51,6 @@
                     Around 2015 a group of friends was looking for an environment to play their favourite sport. They were coming from places where futsal is already very popular such as Spain, Portugal or Brazil, but little they expected they would quickly be embraced by the already growing futsal movement in London. Since then, National and regional level futsal teams such as Profutsal, Newham Futsal, London International Futsal Club or, St John’s Futsal, Barnet Futsal or London United have taken part in the many seasons.      
                   </p><br>
                   <p>LFL has consolidated itself as a reference League in the Greater London area, and is now working hard on providing more people the option to play casual games, friendly matches designed for those who are not looking to commit for a futsal League.</p>
-                  <!-- <ul class="card-flex">
-                    <li>
-                      <div>
-                        <img src="img/lfl-bg-8.jpg" alt="Person 1">
-                        <div class="card-content">
-                          <h3 class="content-subheading">Person 1</h3>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, asperiores.</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <img src="img/lfl-bg-11.jpg" alt="Person 2">
-                        <div class="card-content">
-                          <h3 class="content-subheading">Person 2</h3>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aliquam?</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <img src="img/lfl-bg-1.jpg" alt="Person 3">
-                        <div class="card-content">
-                          <h3 class="content-subheading">Person 3</h3>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, vel.</p>
-                        </div>
-                      </div>
-                    </li>
-                  </ul> -->
                 </div>
               </div>
               <div class="card">
@@ -112,26 +73,49 @@
                 <h2 class="content-subheading">Contact Us</h2>
                 <p>To contact us please use the form below</p>
                 <p>&nbsp;</p>
-                <div class="form-home">
-                  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1lwHp8zXZv2KulK9xf5N1teOZ08iFaFXMd_cO-UzPfNBTkQ/formResponse" method="POST" target="hidden_iframe">
+                <div class="contact-form">
+
+                  <script type="text/javascript">var submitted=false;</script>
+                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://www.google.com';}"></iframe>
+                      
+                  <form id="form-contact" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1lwHp8zXZv2KulK9xf5N1teOZ08iFaFXMd_cO-UzPfNBTkQ/formResponse" method="POST" target="hidden_iframe">
+                    
                     <div class="la-in">
-                      <label for="name">Your name</label>
-                      <input type="text" id="fname" name="entry.1600116832" placeholder="Your name..">
+                      <label for="fname">Name</label>
+                      <input type="text" id="fname" name="entry.1600116832" placeholder="Your name ...">
                     </div>
+              
                     <div class="la-in">
-                      <label for="email">Your e-mail</label>
-                      <input type="text" id="email" name="entry.1476556100" placeholder="Your e-mail..">
+                      <label for="email">E-mail</label>
+                      <input type="text" id="email" name="entry.1476556100" placeholder="Your e-mail ...">
                     </div>
+              
                     <div class="la-in">
-                      <label for="phone">Your phone</label>
-                      <input type="text" id="phone" name="entry.1772019533" placeholder="Your phone..">
+                      <label for="phone">Phone number</label>
+                      <input type="text" id="phone" name="entry.1772019533" placeholder="Your phone ...">
                     </div>
+              
                     <div class="la-in">
-                      <label for="comments">Comments</label>
-                      <textarea id="comments" name="entry.1381389848" placeholder="Write some comments.."></textarea>
+                      <label for="comments">Message</label>
+                      <textarea id="comments" name="entry.1381389848" placeholder="Leave your message here ..."></textarea>
                     </div>
+              
                     <div>
-                      <input class="btn" type="submit" value="Submit">
+                      <div class="errors"></div>
+                      <div id="confirmation">
+                        <h2>Your message has been submitted. Thank you for contacting us.</h2>
+                        <div>
+                            <ul>
+                              <li><a href="index.html">Go Home</a></li>
+                              <li><a href="solo.html">Register a player</a></li>
+                              <li><a href="team.html">Register a team</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                      <div class="btn-group">
+                          <input class="btn-s" type="submit" value="Submit">
+                          <input class="btn-r" type="button" name="reset_form" value="Reset Form" onclick="this.form.reset();">
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -160,31 +144,41 @@
     </div>
     <footer>
       <div>
-        <span class="icon-foot">
-          <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
-        </span>
-        <p>&nbsp;&copy; 2020 | London Futsal League</p>
+        <div>
+          <span class="icon-foot">
+            <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
+          </span>
+          <p>&nbsp;&copy; 2020 | London Futsal League</p>
+        </div><br>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
+          </p>
+        </div><br>
       </div>
       <div>
-        <span class="icon-foot">
-          <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
-        </span>
-        <p>
-          <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
-        </p>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-user fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="solo.html">Solo registration</a>
+          </p>
+        </div><br>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-users fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="team.html">Team registration</a>
+          </p>
+        </div>
       </div>
     </footer>
   </div>
-  <script>
-    $(document).ready(function(){
-      $("#form-solo").submit(function(){
-        $("#confirmation").show("slow");
-      });
-      $(".btn").click(function(){
-        $("form-solo").submit();
-      });  
-    });
-  </script>
   <script type="text/javascript">
     /* curator-feed-lflfeed-layout */
     (function(){
@@ -193,5 +187,6 @@
     e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
     })();
   </script>
+  <script src="/scripts/cvalidation.js"></script>
 </body>
 </html>

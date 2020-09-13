@@ -45,46 +45,59 @@
             </div>
             <h3 class="content-subheading">Leave your info here and we will find a team for you</h3><br>
             <p>Already got a team? Register your team <a href="team.html">here</a></p>
-            <script type="text/javascript">var submitted=false;</script>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://www.google.com';}"></iframe>
             <div class="contact-form">
+        
+              <script type="text/javascript">var submitted=false;</script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://www.google.com';}"></iframe>
+                            
               <form id="form-solo" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfcXfYxSX3wyMXu60trwwXQ6Z3MbvAL_iUiiToCAIk1Ddz0qw/formResponse" method="POST" target="hidden_iframe">
+                
                 <div class="la-in">
                   <label for="fname">Full name</label>
                   <input type="text" id="fname" name="entry.2005620554" placeholder="Your name..">
                 </div>
+          
                 <div class="la-in">
                   <label for="email">E-mail</label>
                   <input type="text" id="email" name="entry.1045781291" placeholder="Your e-mail..">
                 </div>
+          
                 <div class="la-in">
                   <label for="phone">Phone number</label>
                   <input type="text" id="phone" name="entry.1065046570" placeholder="Your phone..">
                 </div>
+          
                 <div class="la-in">
                   <label for="dob">Date of birth</label>
                   <input type="date" id="dob" name="entry.597836224" placeholder="Your date of birth..">
                 </div>
+          
                 <div class="la-in">
                   <label for="address">Address</label>
                   <input type="text" id="address" name="entry.1166974658" placeholder="Your address..">
                 </div>
+          
                 <div class="la-in">
                   <label for="comments">Tell us a bit about yourself</label>
                   <textarea id="comments" name="entry.839337160" placeholder="Write something about you.."></textarea>
                 </div>
+          
                 <div>
-                  <input class="btn" type="submit" value="Submit">
+                  <div class="errors"></div>
                   <div id="confirmation">
                     <h2>Trank you for registering. We will contact you shortly</h2>
                     <div>
-                      <ul>
-                        <li><a href="index.html">Go Home</a></li>
-                        <li><a href="solo.html">Register another player</a></li>
-                        <li><a href="team.html">Register a team</a></li>
-                      </ul>
+                        <ul>
+                          <li><a href="index.html">Go Home</a></li>
+                          <li><a href="/solo.html">Register another player</a></li>
+                          <li><a href="team.html">Register a team</a></li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                    <div class="btn-group">
+                        <input class="btn-s" type="submit" value="Submit">
+                        <input class="btn-r" type="button" name="reset_form" value="Reset Form" onclick="this.form.reset();">
+                    </div>
                 </div>
               </form>
             </div>
@@ -134,15 +147,6 @@
     e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
     })();
   </script>
-  <script>
-    $(document).ready(function(){
-      $("#form-solo").submit(function(){
-        $("#confirmation").show("slow");
-      });
-      $(".btn").click(function(){
-        $("form-solo").submit();
-      });  
-    });
-  </script>
+  <script src="/scripts/svalidation.js"></script>
 </body>
 </html>

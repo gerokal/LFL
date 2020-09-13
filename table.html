@@ -9,16 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "inline-block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "inline-block";
-        }
-      }
-    </script>
     <title>LFL | Standings </title>
 </head>
 <body>
@@ -314,18 +304,38 @@
     </div>
     <footer>
       <div>
-        <span class="icon-foot">
-          <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
-        </span>
-        <p>&nbsp;&copy; 2020 | London Futsal League</p>
+        <div>
+          <span class="icon-foot">
+            <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
+          </span>
+          <p>&nbsp;&copy; 2020 | London Futsal League</p>
+        </div><br>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
+          </p>
+        </div><br>
       </div>
       <div>
-        <span class="icon-foot">
-          <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
-        </span>
-        <p>
-          <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
-        </p>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-user fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="solo.html">Solo registration</a>
+          </p>
+        </div><br>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-users fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="team.html">Team registration</a>
+          </p>
+        </div>
       </div>
     </footer>
   </div>
@@ -336,16 +346,6 @@
     i.src = "https://cdn.curator.io/published/e21c9ef0-9c66-4104-8aa6-08738e5c1992.js";
     e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
     })();
-  </script>
-  <script>
-    $(document).ready(function(){
-      $("#form-solo").submit(function(){
-        $("#confirmation").show("slow");
-      });
-      $(".btn").click(function(){
-        $("form-solo").submit();
-      });  
-    });
   </script>
 </body>
 </html>
