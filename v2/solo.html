@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>LFL | Solo Registration </title>
+</head>
+<body>
+  <div class="container">
+    <div class="cuerpo">
+      <header>
+        <a href="index.html"><img src="img/lfl.svg" alt="LFl logo" id="lfl-logo"></a>
+        <div class="toggle"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixture.html">Fixture</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="clearfix"></div>
+      </header>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('nav').toggleClass('active')
+          })
+        })
+      </script>
+      <main class="grid">
+        <section id="section">
+          <div class="section-wraper">
+            <div class="section-title">
+              <h1>Solo Registration</h1>
+            </div>
+            <h3 class="content-subheading">Leave your info here and we will find a team for you</h3><br>
+            <p>Already got a team? Register your team <a href="team.html">here</a></p>
+            <div class="contact-form">
+        
+              <script type="text/javascript">var submitted=false;</script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://www.google.com';}"></iframe>
+                            
+              <form id="form-solo" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfcXfYxSX3wyMXu60trwwXQ6Z3MbvAL_iUiiToCAIk1Ddz0qw/formResponse" method="POST" target="hidden_iframe">
+                
+                <div class="la-in">
+                  <label for="fname">Full name</label>
+                  <input type="text" id="fname" name="entry.2005620554" placeholder="Your name..">
+                </div>
+          
+                <div class="la-in">
+                  <label for="email">E-mail</label>
+                  <input type="text" id="email" name="entry.1045781291" placeholder="Your e-mail..">
+                </div>
+          
+                <div class="la-in">
+                  <label for="phone">Phone number</label>
+                  <input type="text" id="phone" name="entry.1065046570" placeholder="Your phone..">
+                </div>
+          
+                <div class="la-in">
+                  <label for="dob">Date of birth</label>
+                  <input type="date" id="dob" name="entry.597836224" placeholder="Your date of birth..">
+                </div>
+          
+                <div class="la-in">
+                  <label for="address">Address</label>
+                  <input type="text" id="address" name="entry.1166974658" placeholder="Your address..">
+                </div>
+          
+                <div class="la-in">
+                  <label for="comments">Tell us a bit about yourself</label>
+                  <textarea id="comments" name="entry.839337160" placeholder="Write something about you.."></textarea>
+                </div>
+          
+                <div>
+                  <div class="errors"></div>
+                  <div id="confirmation">
+                    <h2>Trank you for registering. We will contact you shortly</h2>
+                    <div>
+                        <ul>
+                          <li><a href="index.html">Go Home</a></li>
+                          <li><a href="/solo.html">Register another player</a></li>
+                          <li><a href="team.html">Register a team</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="btn-group">
+                        <input class="btn-s" type="submit" value="Submit">
+                        <input class="btn-r" type="button" name="reset_form" value="Reset Form" onclick="this.form.reset();">
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <aside id="aside">
+          <div class="aside-content">
+            <div class="aside-title">
+              <h3>Social Media Feed</h3>
+            </div>          
+            <div id="curator-feed-lflfeed-layout" class="feed">
+              <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+            </div>
+            <!-- <div class="ads">
+              <div class="aside-title">
+                <h4>Ads</h4>
+              </div>
+              <img src="img/lfl-bg-4.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div> -->
+          </div>
+        </aside>
+      </main>
+    </div>
+    <footer>
+      <div>
+        <span class="icon-foot">
+          <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
+        </span>
+        <p>&nbsp;&copy; 2020 | London Futsal League</p>
+      </div>
+      <div>
+        <span class="icon-foot">
+          <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
+        </span>
+        <p>
+          <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript">
+    /* curator-feed-default-feed-layout */
+    (function(){
+    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+    i.src = "https://cdn.curator.io/published/e21c9ef0-9c66-4104-8aa6-08738e5c1992.js";
+    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+    })();
+  </script>
+  <script src="/scripts/svalidation.js"></script>
+</body>
+</html>

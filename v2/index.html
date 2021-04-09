@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71227360-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-71227360-1');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>LFL | Home </title>
+</head>
+<body>
+  <div class="container">
+    <div class="cuerpo">
+      <header>
+        <a href="index.html"><img src="img/lfl.svg" alt="LFl logo" id="lfl-logo"></a>
+        <div class="toggle"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="fixture.html">Fixture</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="clearfix"></div>
+      </header>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('nav').toggleClass('active')
+          })
+        })
+      </script>
+      <main>
+        <div class="hero">
+          <video autoplay muted loop src="video/lfl-v2.mp4" type="video/mp4"></video>
+          <div class="hero-title-wrapper">
+            <div class="hero-title">
+              <h1>London Futsal League</h1>
+              <p>Talk with your feet. Play with your heart</p>
+              <p>&nbsp;</p>
+              <p>🏆10th April | 📍 Westway Sports | ⚽ 10-2 pm Weekends</p>
+            </div>
+            <div class="social">
+              <ul>
+                <li><a href="https://www.facebook.com/LondonFutsalLeague/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+                <li><a href="https://www.instagram.com/londonfutsalleague/" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a></li>
+                <li><a href="https://twitter.com/LondonFutsalLe" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cta">
+          <div>
+            <a href="solo.html" class="cta-box">
+              <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+              <h2>Solo Registration</h2>
+            </a>
+          </div>
+          <div >
+            <a href="team.html" class="cta-box">
+              <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+              <h2>Team Registration</h2>
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div>
+        <span class="icon-foot">
+          <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
+        </span>
+        <p>&nbsp;&copy; 2020 | London Futsal League</p>
+      </div>
+      <div>
+        <span class="icon-foot">
+          <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
+        </span>
+        <p>
+          <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

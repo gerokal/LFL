@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="90"
+   viewBox="0 0 26.458333 23.8125"
+   version="1.1"
+   id="svg19"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="lfl.svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.0496914"
+     inkscape:cx="55.598806"
+     inkscape:cy="52.104454"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-to-guides="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="971"
+     inkscape:window-x="1280"
+     inkscape:window-y="21"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-273.18748)">
+    <g
+       transform="matrix(0.30444188,0,0,0.29917681,-15.757502,256.73657)"
+       aria-label="LFL"
+       style="font-size:54.27511978px;font-family:Calibri;fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.88975608;stroke-opacity:1"
+       id="LFL">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 69.313634,106.65658 h 11.752591 v 3.60422 H 65.094755 V 79.307008 h 4.218879 z"
+         style="fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.78455293;stroke-opacity:1"
+         id="path11" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 103.8357,79.307008 v 3.486424 H 90.831354 v 10.718401 h 11.057176 v 3.486424 H 90.831354 V 110.2608 H 86.589295 V 79.307008 Z"
+         style="fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.78455293;stroke-opacity:1"
+         id="path13" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 113.57763,106.65658 h 11.75259 v 3.60422 H 109.35877 V 79.307012 h 4.21886 z"
+         style="fill:#01b0f1;fill-opacity:1;stroke:none;stroke-width:0.78455293;stroke-opacity:1"
+         id="path15" />
+    </g>
+    <line
+       id="Line_1"
+       data-name="Line 1"
+       y2="296.33853"
+       x1="1.8551443"
+       y1="273.84894"
+       x2="1.8551443"
+       style="fill:#01b0f1;fill-opacity:1;stroke:#01b0f1;stroke-width:1.06445527;stroke-opacity:1" />
+    <line
+       id="Line_2"
+       data-name="Line 2"
+       y2="296.33853"
+       x1="24.603188"
+       y1="273.84894"
+       x2="24.603188"
+       style="fill:#01b0ef;fill-opacity:1;stroke:#01b0f1;stroke-width:1.06445527;stroke-opacity:1" />
+  </g>
+</svg>
