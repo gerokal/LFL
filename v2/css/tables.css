@@ -4,10 +4,11 @@ table {
   border: 0;
   border-spacing: 0;
 }
-table ul{
+.captions ul{
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  font-size: small;
 }
 table td{
   border-bottom: solid 1px #dddddd;
@@ -23,7 +24,11 @@ th, tfoot td {
 tfoot ul{
   font-size: 0.75em;
 }
-.team, .points, .position{
+.team{
+  text-align: left;
+}
+
+.points, .position{
   font-weight: normal;
 }
 .player p, .goals-f{

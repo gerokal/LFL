@@ -254,7 +254,12 @@ aside{
 .ads img{
     width: 100%;
 }
-
+.week-date{
+    background-color: var(--secondary-dark);
+    padding: 0.2em;
+    font-weight: lighter;
+    margin-left: 0.5em;
+}
 /* *** END CORE LAYOUT *** */
 
 
