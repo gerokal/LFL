@@ -1,0 +1,13 @@
+.media-gallery img{
+    max-width: 200px;
+    margin: 0.25em;
+    border: solid 2px #fff;
+    box-shadow: #ccc 3px 3px;
+}
+.more-pics{
+    text-align: center;
+}
+
+.target{
+    font-size: small;
+}
