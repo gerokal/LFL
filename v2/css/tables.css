@@ -43,7 +43,7 @@ tfoot ul{
   tbody td i{
     max-width: 5em;
   }
- .p-team{
+ .p-team, .p-pic{
     display: none;
   }
 }

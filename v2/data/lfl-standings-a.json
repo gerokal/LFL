@@ -1,0 +1,50 @@
+[
+    {
+      "Position": 1,
+      "Team": "LOS BENJAMINES",
+      "Played": 3,
+      "Won": 3,
+      "Drawn": 0,
+      "Lost": 0,
+      "GF": 20,
+      "GA": 10,
+      "GD": 10,
+      "Points": 9
+    },
+    {
+      "Position": 2,
+      "Team": "INTERGEN",
+      "Played": 3,
+      "Won": 1,
+      "Drawn": 1,
+      "Lost": 1,
+      "GF": 15,
+      "GA": 13,
+      "GD": 2,
+      "Points": 4
+    },
+    {
+      "Position": 3,
+      "Team": "OLD BOYS",
+      "Played": 3,
+      "Won": 1,
+      "Drawn": 1,
+      "Lost": 1,
+      "GF": 13,
+      "GA": 14,
+      "GD": -1,
+      "Points": 4
+    },
+    {
+      "Position": 4,
+      "Team": "WEST LONDON",
+      "Played": 3,
+      "Won": 0,
+      "Drawn": 0,
+      "Lost": 3,
+      "GF": 7,
+      "GA": 21,
+      "GD": -11,
+      "Points": 0
+    }
+  ]

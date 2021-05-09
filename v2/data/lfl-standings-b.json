@@ -1,0 +1,50 @@
+[
+  {
+    "Position": 1,
+    "Team": "LDN MOVEMENTS",
+    "Played": 3,
+    "Won": 3,
+    "Drawn": 0,
+    "Lost": 0,
+    "GF": 31,
+    "GA": 13,
+    "GD": 18,
+    "Points": 9
+  },
+  {
+    "Position": 2,
+    "Team": "DRONKEN PIRATES",
+    "Played": 3,
+    "Won": 2,
+    "Drawn": 0,
+    "Lost": 1,
+    "GF": 12,
+    "GA": 13,
+    "GD": -1,
+    "Points": 6
+  },
+  {
+    "Position": 3,
+    "Team": "NEWHAM SPORTS",
+    "Played": 3,
+    "Won": 1,
+    "Drawn": 0,
+    "Lost": 2,
+    "GF": 13,
+    "GA": 25,
+    "GD": -12,
+    "Points": 3
+  },
+  {
+    "Position": 4,
+    "Team": "MODO LEYENDA",
+    "Played": 3,
+    "Won": 0,
+    "Drawn": 0,
+    "Lost": 2,
+    "GF": 9,
+    "GA": 14,
+    "GD": -5,
+    "Points": 0
+  }
+]

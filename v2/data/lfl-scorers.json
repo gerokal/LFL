@@ -1,0 +1,142 @@
+[
+    {
+      "Position": 1,
+      "Pic": "img/player.png",
+      "Player": "Erick Jurado",
+      "Goals": 12,
+      "Team": "LOS BENJAMINES"
+    },
+    {
+      "Position": 2,
+      "Pic": "img/player.png",
+      "Player": "Zahid",
+      "Goals": 12,
+      "Team": "LDN MOVEMENTS"
+    },
+    {
+      "Position": 3,
+      "Pic": "img/player.png",
+      "Player": "David Alvarez",
+      "Goals": 6,
+      "Team": "LOS BENJAMINES"
+    },
+    {
+      "Position": 4,
+      "Pic": "img/player.png",
+      "Player": "TK",
+      "Goals": 6,
+      "Team": "LDN MOVEMENTS"
+    },
+    {
+      "Position": 5,
+      "Pic": "img/player.png",
+      "Player": "Dario",
+      "Goals": 5,
+      "Team": "LDN MOVEMENTS"
+    },
+    {
+      "Position": 6,
+      "Pic": "img/player.png",
+      "Player": "Miguel Dorado",
+      "Goals": 5,
+      "Team": "LOS BENJAMINES"
+    },
+    {
+      "Position": 7,
+      "Pic": "img/player.png",
+      "Player": "Joe Stroomer",
+      "Goals": 5,
+      "Team": "OLD BOYS FUTSAL"
+    },
+    {
+      "Position": 8,
+      "Pic": "img/player.png",
+      "Player": "Marco Di Pinto",
+      "Goals": 5,
+      "Team": "DRONKEN PIRATEN"
+    },
+    {
+      "Position": 9,
+      "Pic": "img/player.png",
+      "Player": "Anderson velez",
+      "Goals": 4,
+      "Team": "INTERGEN"
+    },
+    {
+      "Position": 10,
+      "Pic": "img/player.png",
+      "Player": "Ben protheroe",
+      "Goals": 4,
+      "Team": "NEWHAM SPORTS"
+    },
+    {
+      "Position": 11,
+      "Pic": "img/player.png",
+      "Player": "Osama",
+      "Goals": 4,
+      "Team": "WEST LONDON"
+    },
+    {
+      "Position": 12,
+      "Pic": "img/player.png",
+      "Player": "Matteo",
+      "Goals": 3,
+      "Team": "DRONKEN PIRATEN"
+    },
+    {
+      "Position": 13,
+      "Pic": "img/player.png",
+      "Player": "Pouria",
+      "Goals": 3,
+      "Team": "DRONKEN PIRATEN"
+    },
+    {
+      "Position": 14,
+      "Pic": "img/player.png",
+      "Player": "Charlie",
+      "Goals": 3,
+      "Team": "OLD BOYS FUTSAL"
+    },
+    {
+      "Position": 15,
+      "Pic": "img/player.png",
+      "Player": "Barz",
+      "Goals": 3,
+      "Team": "LDN MOVEMENTS"
+    },
+    {
+      "Position": 16,
+      "Pic": "img/player.png",
+      "Player": "Jamie Shawyer",
+      "Goals": 3,
+      "Team": "LDN MOVEMENTS"
+    },
+    {
+      "Position": 17,
+      "Pic": "img/player.png",
+      "Player": "Jesus",
+      "Goals": 3,
+      "Team": "NEWHAM SPORTS"
+    },
+    {
+      "Position": 18,
+      "Pic": "img/player.png",
+      "Player": "Alexander godfrey",
+      "Goals": 3,
+      "Team": "INTERGEN"
+    },
+    {
+      "Position": 19,
+      "Pic": "img/player.png",
+      "Player": "Leon Bonah",
+      "Goals": 3,
+      "Team": "INTERGEN"
+    },
+    {
+      "Position": 20,
+      "Pic": "img/player.png",
+      "Player": "Wahid",
+      "Goals": 3,
+      "Team": "WEST LONDON"
+    }
+]
