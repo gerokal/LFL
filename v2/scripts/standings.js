@@ -1,7 +1,7 @@
 $(document).ready(function () { 
 
     // FETCHING DATA FROM JSON FILE GROUP A
-    var jsonURL = "/v2/data/lfl-standings-a.json";
+    var jsonURL = "data/lfl-standings-a.json";
 
     $.getJSON(jsonURL, function (data) { 
         var team = ''; 
@@ -30,7 +30,7 @@ $(document).ready(function () {
     });
     
     // FETCHING DATA FROM JSON FILE GROUP B
-    var jsonURL = "/v2/data/lfl-standings-b.json";
+    var jsonURL = "data/lfl-standings-b.json";
 
     $.getJSON(jsonURL, function (data) { 
         var team = ''; 
@@ -59,7 +59,7 @@ $(document).ready(function () {
     });
 
     // FETCHING DATA FROM JSON FILE TOP SCORERS
-    var jsonURL = "/v2/data/lfl-scorers.json";
+    var jsonURL = "data/lfl-scorers.json";
 
     $.getJSON(jsonURL, function (data) { 
         var team = ''; 
