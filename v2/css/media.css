@@ -4,10 +4,11 @@
     border: solid 2px #fff;
     box-shadow: #ccc 3px 3px;
 }
-.more-pics{
-    text-align: center;
+
+.show-gallery{
+    display: none;
 }
 
-.target{
+.more-pics{
     font-size: small;
 }
