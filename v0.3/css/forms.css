@@ -1,0 +1,110 @@
+/* *** forms *** */
+
+.contact-form{
+  padding: 0;
+}
+
+form .la-in{
+padding: 2em;
+background: #eeeeee;
+margin: 1em 0;
+}
+
+form input, form textarea{
+width: 100%;
+padding: 0.75em 0.5em;
+margin: 0 -1em;
+}
+form label{
+text-align: left;
+float: left;
+padding-bottom: 0.5em;
+}
+
+.btn-group{
+justify-content: space-around;
+text-align: center;
+}
+
+form .btn-s{
+text-transform: uppercase;
+font-weight: bold;
+cursor: pointer;
+margin:0 0 2em 0;
+padding: 1em;
+background: #beebff;
+border: none;
+width: 49%;
+}
+form .btn-r{
+text-transform: uppercase;
+font-weight: bold;
+cursor: pointer;
+margin:0 0 2em 0;
+padding: 1em;
+background: #eeeeee;
+border: none;
+width: 49%;
+}
+
+fieldset .la-in{
+padding: 0 ;
+}
+legend{
+padding: 0 0.5em;
+font-weight: bold;
+}
+
+.form-placeholder p{
+padding: 0;
+}
+
+.form-placeholder {
+font-size: small;
+padding-top: 0.5em;
+padding-bottom: 0;
+}
+
+/* *** Success message *** */
+#confirmation{
+display: none;
+margin:0 0 2em 0;
+padding: 1em;
+background: #bbffbb;
+font-size: 200;
+}
+#confirmation ul{
+list-style-type: none;
+display: flex;
+justify-content: space-around;
+margin-top: 2em;
+}
+#confirmation a{
+color: #444444;
+text-decoration: none;
+}
+#confirmation a:hover{
+font-weight: bold;
+}
+
+/*** VALIDATIONS *** */
+
+input.error {
+border: 1px solid #FF0000;
+}
+input:focus {
+border: 1px solid #00FF00;
+}
+.errors{
+padding: 0;
+}
+
+.errors .error {
+padding: 15px;
+background-color: rgba(230, 20, 20, 0.8);
+color: #FFF;
+font-size: 14px;
+pointer-events: all;
+margin-bottom: 10px;
+animation: slide-in 1s ease-out forwards;
+}

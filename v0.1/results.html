@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>LFL | Results </title>
+</head>
+<body>
+  <div class="container">
+    <div class="cuerpo">
+      <header>
+        <a href="index.html"><img src="img/lfl.svg" alt="LFl logo" id="lfl-logo"></a>
+        <div class="toggle"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixture.html">Fixture</a></li>
+            <li><a href="results.html" class="active">Results</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="clearfix"></div>
+      </header>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('nav').toggleClass('active')
+          })
+        })
+      </script>
+      <main class="grid">
+        <section id="section">
+          <div class="section-wraper">
+            <div class="section-title">
+              <h1>Lastest Results</h1>
+            </div>
+            <div class="section-content">
+              <div class="card" id="current-week">
+                <h3 class="content-subheading">Week 1</h3>
+                <table id="table-results">
+                  <thead>
+                    <tr>
+                      <th>Team A</th>
+                      <th>Score</th>
+                      <th>Team B</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Team 1</td>
+                      <td>0-0</td>
+                      <td>Team 2</td>
+                    </tr>
+                    <tr>
+                      <td>Team 3</td>
+                      <td>0-0</td>
+                      <td>Team 4</td>
+                    </tr>
+                    <tr>
+                      <td>Team 5</td>
+                      <td>0-0</td>
+                      <td>Team 6</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="3">
+                        <a href="table.html">See table</a>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div class="card" id="next-week">
+                <h3 class="content-subheading">Week 1</h3>
+                <table id="table-results">
+                  <thead>
+                    <tr>
+                      <th>Team A</th>
+                      <th>Score</th>
+                      <th>Team B</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Team 1</td>
+                      <td>0-0</td>
+                      <td>Team 2</td>
+                    </tr>
+                    <tr>
+                      <td>Team 3</td>
+                      <td>0-0</td>
+                      <td>Team 4</td>
+                    </tr>
+                    <tr>
+                      <td>Team 5</td>
+                      <td>0-0</td>
+                      <td>Team 6</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="3">
+                        <a href="table.html">See table</a>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>              
+              </div>
+            </div>
+          </div>
+        </section>
+        <aside id="aside">
+          <div class="aside-content">
+            <div class="aside-title">
+              <h3>Social Media Feed</h3>
+            </div>          
+            <div id="curator-feed-lflfeed-layout" class="feed">
+              <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+            </div>
+            <!-- <div class="ads">
+              <div class="aside-title">
+                <h4>Ads</h4>
+              </div>
+              <img src="img/lfl-bg-4.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div> -->
+          </div>
+        </aside>
+      </main>
+    </div>
+    <footer>
+      <div>
+        <div>
+          <span class="icon-foot">
+            <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
+          </span>
+          <p>&nbsp;&copy; 2020 | London Futsal League</p>
+        </div><br>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
+          </p>
+        </div><br>
+      </div>
+      <div>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-user fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="solo.html">Solo registration</a>
+          </p>
+        </div><br>
+        <div>
+          <span class="icon-foot">
+            <i class="fas fa-users fa-2x"></i>&nbsp;&nbsp;
+          </span>
+          <p>
+            <a href="team.html">Team registration</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript">
+    /* curator-feed-default-feed-layout */
+    (function(){
+    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+    i.src = "https://cdn.curator.io/published/e21c9ef0-9c66-4104-8aa6-08738e5c1992.js";
+    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+    })();
+  </script>
+</body>
+</html>

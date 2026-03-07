@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f40b0e79f9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>LFL | Team Registration </title>
+</head>
+<body>
+  <div class="container">
+    <div class="cuerpo">
+      <header>
+        <a href="index.html"><img src="img/lfl.svg" alt="LFl logo" id="lfl-logo"></a>
+        <div class="toggle"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="fixture.html">Fixture</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="clearfix"></div>
+      </header>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('nav').toggleClass('active')
+          })
+        })
+      </script>
+      <main class="grid">
+        <section id="section">
+          <div class="section-wraper">
+            <div class="section-title">
+              <h1>Team Registration</h1>
+            </div>
+            <h3 class="content-subheading">Register your team</h3><br>
+            <p>Looking for a team to join instead? <a href="solo.html">click here</a></p>
+            <div class="contact-form">
+
+              <script type="text/javascript">var submitted=false;</script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.href='https://www.google.com';}"></iframe>
+              
+              <form id="form-team" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdTN6B5D3s2dGTQC_jGereKOLD-eP-c88dTKmBXRE5GDm4_hA/formResponse" method="POST" target="hidden_iframe">
+                
+                <div class="la-in">
+                  <label for="tname">Team name</label>
+                  <input type="text" id="tname" name="entry.2005620554" placeholder="Team name...">
+                  <p class="form-placeholder">The name of your team</p>
+                </div>
+          
+                <div class="la-in">
+                  <label for="aff">Affiliated to any Football Association?</label>
+                  <input type="text" id="aff" name="entry.1040388788" placeholder="Yes, No, ...">
+                  <p class="form-placeholder">Please state wheter your team is affiliated to any Football Association. If yes, name it.</p>
+                </div>
+          
+                <div class="la-in">
+                  <label for="kit">Does your team have a kit? </label>
+                  <input type="text" id="kit" name="entry.1986559684" placeholder="Yes, No, ...">
+                  <p class="form-placeholder">If your team has a kit, please give us the details (shirts and shorts).</p>
+                </div>
+          
+                <div class="la-in">
+                  <label for="soc">Social media presence</label>
+                  <input type="text" id="soc" name="entry.1038359009" placeholder="Facebook, Twitter, ...">
+                  <p class="form-placeholder">List your team's social media accounts.</p>
+                </div>
+                  
+                <div class="la-in">
+                  <label for="tcb">Has your team competed before?</label>
+                  <input type="text" id="tcb" name="entry.895823384" placeholder="Yes, No, ...">
+                  <p class="form-placeholder">State if your team has competed in LFL before.</p>
+                </div>
+          
+                <fieldset class="la-in">
+                  <legend>&nbsp; Person in charge &nbsp;</legend>
+                  <div class="la-in">
+                    <label for="pic_name">Name</label>
+                    <input type="text" id="pic_name" name="entry.561946750" placeholder="Person in charge full name...">
+                  </div>
+                  <div class="la-in">
+                    <label for="pic_email">E-mail</label>
+                    <input type="text" id="pic_email" name="entry.1045781291" placeholder="Person in charge email...">
+                  </div>
+                  <div class="la-in">
+                    <label for="pic_phone">Phone</label>
+                    <input type="text" id="pic_phone" name="entry.1166974658" placeholder="Person in charge phone...">
+                  </div>
+                  <div class="la-in">
+                    <label for="pic_address">Address</label>
+                    <input type="text" id="pic_address" name="entry.1065046570" placeholder="Person in charge address...">
+                  </div>
+                </fieldset>
+          
+                <div class="la-in">
+                  <label for="spic">Second person in charge</label>
+                  <input type="text" id="spic" name="entry.72655636" placeholder="Secon person in charge details...">
+                  <p class="form-placeholder">Please state full name, phone and email.</p>
+                </div>
+          
+                <div class="la-in">
+                  <label for="tdescription">Brief description and history of your team.</label>
+                  <textarea id="tdescription" name="entry.839337160" placeholder="Write some lines about your team..."></textarea>
+                </div>
+          
+                <div>
+                  <div class="errors"></div>
+                  <div id="confirmation">
+                    <h2>Trank you for registering. We will contact you shortly</h2>
+                    <div>
+                      <ul>
+                        <li><a href="index.html">Go Home</a></li>
+                        <li><a href="team.html">Register another team</a></li>
+                        <li><a href="solo.html">Register a player</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <input class="btn-s" type="submit" value="Submit">
+                    <input class="btn-r" type="button" name="reset_form" value="Reset Form" onclick="this.form.reset();">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <aside id="aside">
+          <div class="aside-content">
+            <div class="aside-title">
+              <h3>Social Media Feed</h3>
+            </div>          
+            <div id="curator-feed-lflfeed-layout" class="feed">
+              <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+            </div>
+            <!-- <div class="ads">
+              <div class="aside-title">
+                <h4>Ads</h4>
+              </div>
+              <img src="img/lfl-bg-4.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div> -->
+          </div>
+        </aside>
+      </main>
+    </div>
+    <footer>
+      <div>
+        <span class="icon-foot">
+          <a href="index.html"><img src="img/lfl.svg" alt="LFl logo"></a>
+        </span>
+        <p>&nbsp;&copy; 2020 | London Futsal League</p>
+      </div>
+      <div>
+        <span class="icon-foot">
+          <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
+        </span>
+        <p>
+          <a href="mailto:contact@londonfutsalleague.com">contact@londonfutsalleague.com</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript">
+    /* curator-feed-default-feed-layout */
+    (function(){
+    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+    i.src = "https://cdn.curator.io/published/e21c9ef0-9c66-4104-8aa6-08738e5c1992.js";
+    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+    })();
+  </script>
+  <script src="/scripts/tvalidation.js"></script>
+</body>
+</html>
