@@ -1,0 +1,261 @@
+[
+  {
+    "Position": 1,
+    "Pic": "img/marco.png",
+    "Player": "Marco Di Pinto",
+    "Goals": 16,
+    "Team": "DRONKEN PIRATEN"
+  },
+  {
+    "Position": 2,
+    "Pic": "img/osama.png",
+    "Player": "Osama A.",
+    "Goals": 10,
+    "Team": "GB ORANJE FUTSAL"
+  },
+  {
+    "Position": 3,
+    "Pic": "img/joao.png",
+    "Player": "Joao Mirabile",
+    "Goals": 9,
+    "Team": "FINTA FUTSAL"
+  },
+  {
+    "Position": 4,
+    "Pic": "img/diegop.png",
+    "Player": "Diego Pagliuso",
+    "Goals": 7,
+    "Team": "FINTA FUSTAL"
+  },
+  {
+    "Position": 5,
+    "Pic": "img/ashvine.png",
+    "Player": "Ashvine Lohan",
+    "Goals": 6,
+    "Team": "INTERGEN"
+  },
+  {
+    "Position": 6,
+    "Pic": "img/ander.png",
+    "Player": "Ander Velez",
+    "Goals": 6,
+    "Team": "LONDON GALAXY"
+  },
+  {
+    "Position": 7,
+    "Pic": "img/player.png",
+    "Player": "Diego",
+    "Goals": 5,
+    "Team": "INTERGEN"
+  },
+  {
+    "Position": 8,
+    "Pic": "img/player.png",
+    "Player": "Matthew Atere",
+    "Goals": 5,
+    "Team": "JUNCTION ELITE"
+  },
+  {
+    "Position": 9,
+    "Pic": "img/player.png",
+    "Player": "Pol Amoros",
+    "Goals": 5,
+    "Team": "RG FC"
+  },
+  {
+    "Position": 10,
+    "Pic": "img/player.png",
+    "Player": "Nicolas Moreno",
+    "Goals": 5,
+    "Team": "LONDON GALAXY"
+  },
+  {
+    "Position": 11,
+    "Pic": "img/player.png",
+    "Player": "Kai Dennis",
+    "Goals": 5,
+    "Team": "FINTA FUTSAL"
+  },
+  {
+    "Position": 12,
+    "Pic": "img/player.png",
+    "Player": "Andree",
+    "Goals": 4,
+    "Team": "GB ORANJE FUTSAL"
+  },
+  {
+    "Position": 13,
+    "Pic": "img/player.png",
+    "Player": "Fernando Malta",
+    "Goals": 4,
+    "Team": "FINTA FUTSAL"
+  },
+  {
+    "Position": 14,
+    "Pic": "img/player.png",
+    "Player": "Nicolas M.",
+    "Goals": 4,
+    "Team": "INTERGEN"
+  },
+  {
+    "Position": 15,
+    "Pic": "img/player.png",
+    "Player": "Bilal",
+    "Goals": 4,
+    "Team": "INTERGEN"
+  },
+  {
+    "Position": 16,
+    "Pic": "img/player.png",
+    "Player": "Giani",
+    "Goals": 4,
+    "Team": "LONDON GALAXY"
+  },
+  {
+    "Position": 17,
+    "Pic": "img/player.png",
+    "Player": "Michael Acuna",
+    "Goals": 4,
+    "Team": "RG FC"
+  },
+  {
+    "Position": 18,
+    "Pic": "img/player.png",
+    "Player": "Jose Prado",
+    "Goals": 4,
+    "Team": "RG FC"
+  },
+  {
+    "Position": 19,
+    "Pic": "img/player.png",
+    "Player": "Mirko Lalli",
+    "Goals": 3,
+    "Team": "DRONKEN PIRATEN"
+  },
+  {
+    "Position": 20,
+    "Pic": "img/player.png",
+    "Player": "Rants",
+    "Goals": 3,
+    "Team": "GB ORANJE FUTSAL"
+  },
+  {
+    "Position": 21,
+    "Pic": "img/player.png",
+    "Player": "Courtney",
+    "Goals": 3,
+    "Team": "NEWHAM FUTSAL"
+  },
+  {
+    "Position": 22,
+    "Pic": "img/player.png",
+    "Player": "Santiago",
+    "Goals": 3,
+    "Team": "NEWHAM FUTSAL"
+  },
+  {
+    "Position": 23,
+    "Pic": "img/player.png",
+    "Player": "Holli",
+    "Goals": 3,
+    "Team": "DESVALIDO FC"
+  },
+  {
+    "Position": 24,
+    "Pic": "img/player.png",
+    "Player": "Sega",
+    "Goals": 3,
+    "Team": "INTERGEN"
+  },
+  {
+    "Position": 25,
+    "Pic": "img/player.png",
+    "Player": "Louis",
+    "Goals": 3,
+    "Team": "GB ORANJE FUTSAL"
+  },
+  {
+    "Position": 26,
+    "Pic": "img/player.png",
+    "Player": "James Cullimore",
+    "Goals": 3,
+    "Team": "OLD BOYS FUTSAL"
+  },
+  {
+    "Position": 27,
+    "Pic": "img/player.png",
+    "Player": "Rob",
+    "Goals": 3,
+    "Team": "OLD BOYS FUTSAL"
+  },
+  {
+    "Position": 28,
+    "Pic": "img/player.png",
+    "Player": "Billy",
+    "Goals": 3,
+    "Team": "OLD BOYS FUTSAL"
+  },
+  {
+    "Position": 29,
+    "Pic": "img/player.png",
+    "Player": "Jean",
+    "Goals": 3,
+    "Team": "LONDON GALAXY"
+  },
+  {
+    "Position": 30,
+    "Pic": "img/player.png",
+    "Player": "Rafael Sousa",
+    "Goals": 3,
+    "Team": "FINTA FUTSAL"
+  },
+  {
+    "Position": 31,
+    "Pic": "img/player.png",
+    "Player": "Lautero Belicra",
+    "Goals": 3,
+    "Team": "RG FC"
+  },
+  {
+    "Position": 32,
+    "Pic": "img/player.png",
+    "Player": "Mohammed",
+    "Goals": 3,
+    "Team": "ST ALBANS FUTSAL"
+  },
+  {
+    "Position": 33,
+    "Pic": "img/player.png",
+    "Player": "Nick Obrein",
+    "Goals": 3,
+    "Team": "JUNCTION ELITE"
+  },
+  {
+    "Position": 34,
+    "Pic": "img/player.png",
+    "Player": "Saulimone C.",
+    "Goals": 3,
+    "Team": "JUNCTION ELITE"
+  },
+  {
+    "Position": 35,
+    "Pic": "img/player.png",
+    "Player": "Simon",
+    "Goals": 3,
+    "Team": "GB ORANJE FUTSAL"
+  },
+  {
+    "Position": 36,
+    "Pic": "img/player.png",
+    "Player": "Kave Henrique",
+    "Goals": 3,
+    "Team": "FINTA FUTSAL"
+  },
+  {
+    "Position": 37,
+    "Pic": "img/player.png",
+    "Player": "Rafael Sousa",
+    "Goals": 3,
+    "Team": "FINTA FUTSAL"
+  }
+]

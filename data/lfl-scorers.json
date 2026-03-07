@@ -1,0 +1,30 @@
+[
+  {
+    "Position": 1,
+    "Pic": "img/player.png",
+    "Player": "Radostin",
+    "Goals": 16,
+    "Team": "INDO LDN"
+  },
+  {
+    "Position": 2,
+    "Pic": "img/player.png",
+    "Player": "Micheal Kikambi",
+    "Goals": 9,
+    "Team": "LONDON PIRATES"
+  },
+  {
+    "Position": 3,
+    "Pic": "img/player.png",
+    "Player": null,
+    "Goals": null,
+    "Team": null
+  },
+  {
+    "Position": 3,
+    "Pic": "img/player.png",
+    "Player": null,
+    "Goals": null,
+    "Team": null
+  }
+]

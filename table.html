@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/tables.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/f40b0e79f9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>LFL | Standings</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cuerpo">
+        <header>
+          <a href="index.html"
+            ><img src="img/lfl.svg" alt="LFl logo" id="lfl-logo"
+          /></a>
+          <div class="toggle"></div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="free-games.html">Free Games</a></li>
+              <li><a href="whats-futsal.html">What is Futsal?</a></li>
+              <li><a href="table.html" class="active">Table</a></li>
+              <li><a href="teams.html">Teams</a></li>
+              <li><a href="media.html">SEASON 2024</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="clearfix"></div>
+        </header>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $(".toggle").click(function () {
+              $(".toggle").toggleClass("active");
+              $("nav").toggleClass("active");
+            });
+          });
+        </script>
+        <main class="grid">
+          <section id="section">
+            <div class="section-wraper">
+              <div class="section-title">
+                <h1>Standings</h1>
+              </div>
+              <div class="section-content">
+                <h2>Autumn Season SEPT to DEC 2022</h2>
+                <div class="card">
+                  <h3 class="content-subheading">
+                    Clapham Common SOUTH Division
+                  </h3>
+                  <table id="table-standings-a">
+                    <thead>
+                      <tr>
+                        <th class="">Pos</th>
+                        <th class="">Team</th>
+                        <th class="played">P</th>
+                        <th class="won">W</th>
+                        <th class="draw">D</th>
+                        <th class="lost">L</th>
+                        <th class="goal-f">GF</th>
+                        <th class="goal-a">GA</th>
+                        <th class="goal-d">GD</th>
+                        <th class="">Pts</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                      <tr class="captions">
+                        <td colspan="10"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <!-- end group A-->
+                  <h3 class="content-subheading">Tottenham NORTH Division</h3>
+                  <table id="table-standings-b">
+                    <thead>
+                      <tr>
+                        <th class="">Pos</th>
+                        <th class="">Team</th>
+                        <th class="played">P</th>
+                        <th class="won">W</th>
+                        <th class="draw">D</th>
+                        <th class="lost">L</th>
+                        <th class="goal-f">GF</th>
+                        <th class="goal-a">GA</th>
+                        <th class="goal-d">GD</th>
+                        <th class="">Pts</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                      <tr class="captions">
+                        <td colspan="10"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <!-- End group B-->
+                  <p>&nbsp;</p>
+                  <div class="captions">
+                    <ul>
+                      <li><strong>Pos</strong> = Position</li>
+                      <li><strong>P</strong> = Played</li>
+                      <li><strong>W</strong> = Won</li>
+                      <li><strong>D</strong> = Drawn</li>
+                      <li><strong>L</strong> = Lost</li>
+                      <li><strong>GF</strong> = Goals For</li>
+                      <li><strong>GA</strong> = Goals Against</li>
+                      <li><strong>GD</strong> = Goal Difference</li>
+                      <li><strong>Pts</strong> = Points</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card" id="scorers">
+                  <h3 class="content-subheading">Top Scorers</h3>
+                  <table id="top-scorers">
+                    <thead>
+                      <tr>
+                        <th class="">Pos</th>
+                        <th class="p-pic">Pic</th>
+                        <th class="">Player's name</th>
+                        <th class="">Goals</th>
+                        <th class="p-team">Player's team</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <aside id="aside">
+            <div class="aside-content">
+              <div class="aside-title">
+                <h3>Social Media Feed</h3>
+              </div>
+              <div id="curator-feed-lflfeed-layout" class="feed">
+                <a
+                  href="https://curator.io"
+                  target="_blank"
+                  class="crt-logo crt-tag"
+                  >Powered by Curator.io</a
+                >
+              </div>
+              <!-- <div class="ads">
+              <div class="aside-title">
+                <h4>Ads</h4>
+              </div>
+              <img src="img/lfl-bg-4.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div> -->
+            </div>
+          </aside>
+        </main>
+      </div>
+      <footer>
+        <div>
+          <div>
+            <span class="icon-foot">
+              <a href="index.html"><img src="img/lfl.svg" alt="LFl logo" /></a>
+            </span>
+            <p class="year">&nbsp;&copy; 2022 | London Futsal League</p>
+          </div>
+          <br />
+          <div>
+            <span class="icon-foot">
+              <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
+            </span>
+            <p>
+              <a href="mailto:contact@londonfutsalleague.com"
+                >contact@londonfutsalleague.com</a
+              >
+            </p>
+          </div>
+          <br />
+        </div>
+        <div>
+          <div>
+            <span class="icon-foot">
+              <i class="fas fa-user fa-2x"></i>&nbsp;&nbsp;
+            </span>
+            <p>
+              <a href="solo.html">Solo registration</a>
+            </p>
+          </div>
+          <br />
+          <div>
+            <span class="icon-foot">
+              <i class="fas fa-users fa-2x"></i>&nbsp;&nbsp;
+            </span>
+            <p>
+              <a href="team.html">Team registration</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      /* curator-feed-default-feed-layout */
+      (function () {
+        var i,
+          e,
+          d = document,
+          s = "script";
+        i = d.createElement("script");
+        i.async = 1;
+        i.src =
+          "https://cdn.curator.io/published/2b430e20-754c-44f0-856a-5f7b3f3f9af1.js";
+        e = d.getElementsByTagName(s)[0];
+        e.parentNode.insertBefore(i, e);
+      })();
+    </script>
+    <script src="scripts/standings.js"></script>
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>
