@@ -1,0 +1,168 @@
+---
+layout: base.njk
+title: "London Futsal League | About Us"
+description: "About London Futsal League - our mission, vision, and history since 2015. Contact us to learn more about futsal in London."
+ogTitle: "London Futsal League | About Us"
+ogDescription: "About London Futsal League - our mission, vision, and history since 2015. Contact us to learn more about futsal in London."
+ogUrl: "about.html"
+activePage: "about"
+hasAside: true
+extraCss:
+  - "/css/forms.css"
+pageScripts:
+  - "/scripts/submit-contact.js"
+permalink: "about.html"
+---
+
+<div class="section-wraper">
+  <div class="section-title">
+    <h1>About Us</h1>
+  </div>
+  <div class="section-content">
+    <div class="card">
+      <h2 class="content-subheading">About London Futsal league</h2>
+      <div>
+        <p>
+          London Futsal League (LFL) was born as a way for people to
+          find a space to play and create a community around futsal
+          in London. Around 2015 a group of friends was looking for
+          an environment to play their favourite sport. They were
+          coming from places where futsal is already very popular
+          such as Spain, Portugal or Brazil, but little they
+          expected they would quickly be embraced by the already
+          growing futsal movement in London. Since then, National
+          and regional level futsal teams such as Profutsal, Newham
+          Futsal, London International Futsal Club or, St John's
+          Futsal, Barnet Futsal or London United have taken part in
+          the many seasons.
+        </p>
+        <br />
+        <p>
+          LFL has consolidated itself as a reference League in the
+          Greater London area, and is now working hard on providing
+          more people the option to play casual games, friendly
+          matches designed for those who are not looking to commit
+          for a futsal League.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="content-subheading">Our Mission and Vision</h2>
+      <div>
+        <img src="/img/mision.jpg" alt="Mission and Vision" loading="lazy" />
+        <div class="card-flex">
+          <div class="content-flex">
+            <h3 class="content-subheading">Mission</h3>
+            <p>
+              We strive to offer futsal and football enthusiasts the
+              most affordable and convenient options to play the
+              game with other enthusiasts.
+            </p>
+          </div>
+          <div class="content-flex">
+            <h3 class="content-subheading">Vision</h3>
+            <p>
+              Our vision is to become a leading space where people
+              go to enjoy sports, have fun, and connect with other
+              like-minded futsal enthusiasts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="affiliated">
+        <div class="affiliated-item affiliated-item-1">
+          <a href="https://www.amateur-fa.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="/img/TEAMS/2024/Amateur_Football_Alliance.png"
+              alt="Amateur Football Alliance"
+              loading="lazy"
+            />
+            <span class="sr-only">(opens in new tab)</span>
+          </a>
+        </div>
+        <div class="affiliated-item affiliated-item-2">
+          <h3>Affiliated to Amateur Football Alliance</h3>
+        </div>
+      </div>
+    </div>
+    <div id="contact-us-form" class="card">
+      <h2 class="content-subheading">Contact Us</h2>
+      <p>To contact us please use the form below</p>
+      <div class="contact-form">
+        <form
+          id="form-contact"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1lwHp8zXZv2KulK9xf5N1teOZ08iFaFXMd_cO-UzPfNBTkQ/formResponse"
+          method="POST"
+        >
+          <div class="la-in">
+            <label for="fname">Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="entry.1600116832"
+              placeholder="Your name ..."
+            />
+          </div>
+
+          <div class="la-in">
+            <label for="email">E-mail</label>
+            <input
+              type="text"
+              id="email"
+              name="entry.1476556100"
+              placeholder="Your e-mail ..."
+            />
+          </div>
+
+          <div class="la-in">
+            <label for="phone">Phone number</label>
+            <input
+              type="text"
+              id="phone"
+              name="entry.1772019533"
+              placeholder="Your phone ..."
+            />
+          </div>
+
+          <div class="la-in">
+            <label for="comments">Message</label>
+            <textarea
+              id="comments"
+              name="entry.1381389848"
+              placeholder="Leave your message here ..."
+            ></textarea>
+          </div>
+
+          <div>
+            <div class="errors" aria-live="polite"></div>
+            <div id="confirmation">
+              <h2>
+                Your message has been submitted. Thank you for
+                contacting us.
+              </h2>
+              <div>
+                <ul>
+                  <li><a href="/index.html">Go Home</a></li>
+                  <li><a href="/solo.html">Register a player</a></li>
+                  <li><a href="/team.html">Register a team</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="btn-group">
+              <input class="btn-s" type="submit" value="Submit" />
+              <input
+                class="btn-r"
+                type="button"
+                name="reset_form"
+                value="Reset Form"
+                onclick="this.form.reset();"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

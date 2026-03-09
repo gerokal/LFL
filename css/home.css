@@ -39,12 +39,45 @@ a:hover {
   height: 100%;
   background: #ffffff;
 }
-.cuerpo {
+.cuerpo,
+.page-wrapper {
   padding: 0 2em;
 }
 main {
   margin: 2em 0 0 0;
 }
+
+/* *** ACCESSIBILITY *** */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.75em 1.5em;
+  z-index: 1000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+/* *** END ACCESSIBILITY *** */
 
 /* *** NAVBAR *** */
 
@@ -54,17 +87,17 @@ header {
   padding: 0 2em;
   background: #ffffff;
   border-bottom: 0.1em solid var(--secondary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 #lfl-logo {
   max-height: 5em;
-  float: left;
   padding: 1em 0;
 }
 nav {
-  float: right;
-}
-.clearfix {
-  clear: both;
+  margin-left: auto;
 }
 nav ul {
   margin: 0;
@@ -288,6 +321,7 @@ video {
   color: #000000;
   border: var(--secondary-dark) 1px solid;
   margin: 1rem 0;
+  padding: 1.5em;
 }
 .call-to-action p {
   text-align: center;
@@ -385,6 +419,44 @@ aside {
 }
 /* *** END CORE LAYOUT *** */
 
+/* *** 404 ERROR PAGE *** */
+.error-page {
+  padding: 4em 2em;
+  text-align: center;
+}
+.error-page .error-logo {
+  max-width: 120px;
+  margin-bottom: 1.5em;
+}
+.error-page h1 {
+  font-size: 6em;
+  line-height: 1;
+  color: var(--primary);
+  margin-bottom: 0.1em;
+}
+.error-page h2 {
+  font-size: 1.75em;
+  color: var(--text-dark);
+  margin-bottom: 0.5em;
+}
+.error-page p {
+  text-align: center;
+  font-size: 1.1em;
+  color: var(--text-dark);
+  margin-bottom: 2em;
+}
+.error-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+.error-links .cta-box {
+  padding: 1.5em 2.5em;
+  gap: 0.75em;
+}
+/* *** END 404 ERROR PAGE *** */
+
 /* *** FOOTER *** */
 
 footer {
@@ -393,12 +465,12 @@ footer {
   color: #ffffff;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   justify-content: space-around;
 }
 
 .icon-foot {
-  float: left;
   margin-right: 0.5em;
 }
 footer img {
@@ -421,12 +493,13 @@ footer a {
     width: 1.25em;
     height: 1.25em;
     margin: 1em 0.3em;
-    float: right;
     cursor: pointer;
-    /* background: #b3b3b3; */
+    background: none;
+    border: none;
     text-align: center;
     font-size: 2em;
     color: var(--text-dark);
+    padding: 0;
   }
   .toggle::before {
     content: "\f0c9";
@@ -462,7 +535,8 @@ footer a {
   .container {
     padding: 0;
   }
-  .cuerpo {
+  .cuerpo,
+  .page-wrapper {
     padding: 0 0.5em;
   }
 
@@ -492,7 +566,8 @@ footer a {
     padding-left: 1.2em;
   }
   .hero-title p:nth-child(3) {
-    display: none;
+    font-size: 0.85em;
+    line-height: 1.2em;
   }
   .social {
     margin-right: 0.5em;
@@ -535,7 +610,9 @@ footer a {
   }
 
   .card-flex {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
   }
   .card-flex li {
     padding: 0;
@@ -544,11 +621,69 @@ footer a {
     margin: 1rem 0;
   }
 
+  /* *** 404 PAGE *** */
+  .error-page {
+    padding: 2em 1em;
+  }
+  .error-page h1 {
+    font-size: 4em;
+  }
+
   footer {
     display: block;
   }
   footer div {
     text-align: center;
     margin: 1em auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title h1 {
+    font-size: 1.25em;
+  }
+  .hero-title p {
+    font-size: 0.85em;
+  }
+  .hero-title-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-title {
+    width: 100%;
+  }
+  .social {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0.25em 0;
+  }
+  .social ul {
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    padding: 1.5em;
+  }
+  .cta-box h2 {
+    font-size: 1.25em;
+  }
+
+  .card-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .error-page h1 {
+    font-size: 3em;
+  }
+  .error-page h2 {
+    font-size: 1.25em;
+  }
+  .error-links {
+    flex-direction: column;
+    align-items: center;
   }
 }

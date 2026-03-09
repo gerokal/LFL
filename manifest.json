@@ -1,0 +1,27 @@
+{
+  "name": "London Futsal League",
+  "short_name": "LFL",
+  "description": "Competitive futsal in Brixton and North Finchley. Register your team or join as a solo player.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00aefd",
+  "icons": [
+    {
+      "src": "/img/lfl-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/lfl-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/lfl.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

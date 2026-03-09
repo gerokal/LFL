@@ -1,85 +1,65 @@
-$(document).ready(function () { 
+document.addEventListener("DOMContentLoaded", function () {
 
-    // FETCHING DATA FROM JSON FILE GROUP A
-    var jsonURL = "data/lfl-standings-a.json";
+  function escapeHTML(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
 
-    $.getJSON(jsonURL, function (data) { 
-        var team = ''; 
+  function buildStandingsRow(value) {
+    let row = '<tr>';
+    row += '<td class="position">' + escapeHTML(value.Position) + '</td>';
+    row += '<td class="team">' + escapeHTML(value.Team) + '</td>';
+    row += '<td class="played">' + escapeHTML(value.Played) + '</td>';
+    row += '<td class="won"> ' + escapeHTML(value.Won) + '</td>';
+    row += '<td class="draw">' + escapeHTML(value.Drawn) + '</td>';
+    row += '<td class="lost">' + escapeHTML(value.Lost) + '</td>';
+    row += '<td class="goal-f">' + escapeHTML(value.GF) + '</td>';
+    row += '<td class="goal-a">' + escapeHTML(value.GA) + '</td>';
+    row += '<td class="goal-d">' + escapeHTML(value.GD) + '</td>';
+    row += '<td class="points">' + escapeHTML(value.Points) + '</td>';
+    row += '</tr>';
+    return row;
+  }
 
-        // ITERATING THROUGH OBJECTS 
-        $.each(data, function (key, value) { 
+  function loadStandings(url, tableId) {
+    fetch(url)
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        let html = '';
+        data.forEach(function (value) {
+          html += buildStandingsRow(value);
+        });
+        document.getElementById(tableId).querySelector('tbody').innerHTML = html;
+      });
+  }
 
-            //CONSTRUCTION OF ROWS HAVING 
-            // DATA FROM JSON OBJECT 
-            team += '<tr>'; 
-            team += '<td class="position">' + value.Position + '</td>'; 
-            team += '<td class="team">' + value.Team + '</td>';
-            team += '<td class="played">' + value.Played + '</td>';
-            team += '<td class="won"> ' + value.Won + '</td>'; 
-            team += '<td class="draw">' + value.Drawn + '</td>';
-            team += '<td class="lost">' + value.Lost + '</td>';
-            team += '<td class="goal-f">' + value.GF + '</td>';
-            team += '<td class="goal-a">' + value.GA + '</td>';
-            team += '<td class="goal-d">' + value.GD + '</td>';
-            team += '<td class="points">' + value.Points + '</td>';
-            team += '</tr>'; 
-        }); 
-        
-        //INSERTING ROWS INTO TABLE 
-        $('#table-standings-a').append(team); 
-    });
-    
-    // FETCHING DATA FROM JSON FILE GROUP B
-    var jsonURL = "data/lfl-standings-b.json";
+  // Load Group A standings
+  loadStandings('data/lfl-standings-a.json', 'table-standings-a');
 
-    $.getJSON(jsonURL, function (data) { 
-        var team = ''; 
+  // Load Group B standings
+  loadStandings('data/lfl-standings-b.json', 'table-standings-b');
 
-        // ITERATING THROUGH OBJECTS 
-        $.each(data, function (key, value) { 
-
-            //CONSTRUCTION OF ROWS HAVING 
-            // DATA FROM JSON OBJECT 
-            team += '<tr>'; 
-            team += '<td class="position">' + value.Position + '</td>'; 
-            team += '<td class="team">' + value.Team + '</td>';
-            team += '<td class="played">' + value.Played + '</td>';
-            team += '<td class="won"> ' + value.Won + '</td>'; 
-            team += '<td class="draw">' + value.Drawn + '</td>';
-            team += '<td class="lost">' + value.Lost + '</td>';
-            team += '<td class="goal-f">' + value.GF + '</td>';
-            team += '<td class="goal-a">' + value.GA + '</td>';
-            team += '<td class="goal-d">' + value.GD + '</td>';
-            team += '<td class="points">' + value.Points + '</td>';
-            team += '</tr>'; 
-        }); 
-        
-        //INSERTING ROWS INTO TABLE 
-        $('#table-standings-b').append(team); 
-    });
-
-    // FETCHING DATA FROM JSON FILE TOP SCORERS
-    var jsonURL = "data/lfl-scorers.json";
-
-    $.getJSON(jsonURL, function (data) { 
-        var team = ''; 
-
-        // ITERATING THROUGH OBJECTS 
-        $.each(data, function (key, value) { 
-
-            //CONSTRUCTION OF ROWS HAVING 
-            // DATA FROM JSON OBJECT 
-            team += '<tr>'; 
-            team += '<td class="position">' + value.Position + '</td>'; 
-            team += '<td class="p-pic"><img src='+ value.Pic + '></td>';
-            team += '<td class="player">' + value.Player + '</td>';
-            team += '<td class="goals-f">' + value.Goals + '</td>'; 
-            team += '<td class="p-team">' + value.Team + '</td>';
-            team += '</tr>'; 
-        }); 
-        
-        //INSERTING ROWS INTO TABLE 
-        $('#top-scorers').append(team); 
+  // Load Top Scorers
+  fetch('data/lfl-scorers.json')
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+      let html = '';
+      data.forEach(function (value) {
+        if (value.Player == null) return;
+        html += '<tr>';
+        html += '<td class="position">' + escapeHTML(value.Position) + '</td>';
+        html += '<td class="p-pic"><img src="' + escapeHTML(value.Pic) + '"></td>';
+        html += '<td class="player">' + escapeHTML(value.Player) + '</td>';
+        html += '<td class="goals-f">' + escapeHTML(value.Goals) + '</td>';
+        html += '<td class="p-team">' + escapeHTML(value.Team) + '</td>';
+        html += '</tr>';
+      });
+      document.getElementById('top-scorers').querySelector('tbody').innerHTML = html;
     });
 
-}); 
+});

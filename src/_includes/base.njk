@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.njk" %}
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    {{ bodyStartContent | safe }}
+    <div class="container">
+      <div class="page-wrapper">
+        {% include "header.njk" %}
+        <main id="main-content"{% if hasAside %} class="grid"{% endif %}>
+          {% if hasAside %}
+          <section id="section">
+          {% endif %}
+            {{ content | safe }}
+          {% if hasAside %}
+          </section>
+          {% include "aside.njk" %}
+          {% endif %}
+        </main>
+      </div>
+      {% include "footer.njk" %}
+    </div>
+    {% if hasAside %}
+    <script type="text/javascript">
+      /* curator-feed-lflfeed-layout */
+      (function () {
+        var i,
+          e,
+          d = document,
+          s = "script";
+        i = d.createElement("script");
+        i.async = 1;
+        i.src =
+          "https://cdn.curator.io/published/2b430e20-754c-44f0-856a-5f7b3f3f9af1.js";
+        e = d.getElementsByTagName(s)[0];
+        e.parentNode.insertBefore(i, e);
+      })();
+    </script>
+    {% endif %}
+    {% for script in extraScriptsBefore %}
+    <script src="{{ script }}"></script>
+    {% endfor %}
+    <script src="/scripts/hamburger.js"></script>
+    <script src="/scripts/main.js"></script>
+    {% for script in pageScripts %}
+    <script src="{{ script }}"></script>
+    {% endfor %}
+  </body>
+</html>

@@ -72,7 +72,7 @@ legend {
   margin: 0 0 2em 0;
   padding: 1em;
   background: #bbffbb;
-  font-size: 200;
+  font-size: 200%;
 }
 #confirmation ul {
   list-style-type: none;

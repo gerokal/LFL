@@ -1,0 +1,36 @@
+<!-- Start cookieyes banner -->
+<script
+  id="cookieyes"
+  type="text/javascript"
+  src="https://cdn-cookieyes.com/client_data/31a19c615b873054bfe455e8/script.js"
+></script>
+<!-- End cookieyes banner -->
+{% if analyticsScript %}
+{{ analyticsScript | safe }}
+{% endif %}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/css/home.css" />
+{% for css in extraCss %}
+<link rel="stylesheet" href="{{ css }}" />
+{% endfor %}
+<link
+  href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+  rel="stylesheet"
+/>
+<script
+  src="https://kit.fontawesome.com/f40b0e79f9.js"
+  crossorigin="anonymous"
+></script>
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}" />
+{% if ogTitle %}
+<meta property="og:title" content="{{ ogTitle or title }}" />
+<meta property="og:description" content="{{ ogDescription or description }}" />
+<meta property="og:image" content="https://www.londonfutsalleague.com/img/lfl-og.jpg" />
+<meta property="og:url" content="https://www.londonfutsalleague.com/{{ ogUrl }}" />
+<meta property="og:type" content="website" />
+{% endif %}
+<link rel="icon" type="image/svg+xml" href="/img/lfl.svg" />
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#00aefd" />

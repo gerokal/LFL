@@ -1,4 +1,4 @@
-# LFL Website Modernisation -- Implementation Plan
+6# LFL Website Modernisation -- Implementation Plan
 
 **Created:** March 2026
 **Based on:** [AUDIT-REPORT.md](AUDIT-REPORT.md)
@@ -22,13 +22,16 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Description:** Line 121 of `index.html` has `<script2026` instead of `<script`. This typo prevents the Wistia video embed script from loading.
 
 **Files to modify:**
+
 - `index.html` (line 121)
 
 **Steps:**
+
 1. Change `<script2026` to `<script` on line 121
 2. Verify the closing `></script>` on line 124 is correct
 
 **Acceptance criteria:**
+
 - Wistia video embed loads and plays in the hero section
 - No console errors related to Wistia scripts
 
@@ -39,9 +42,11 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Description:** `standings.js` builds HTML via string concatenation from JSON values without sanitisation. The top scorers section injects an `<img src=...>` tag directly from JSON. If data files are compromised, this allows stored XSS.
 
 **Files to modify:**
+
 - `scripts/standings.js`
 
 **Steps:**
+
 1. Create a helper function `escapeHTML(str)` that replaces `&`, `<`, `>`, `"`, `'` with HTML entities; handle `null`/`undefined` by returning empty string
 2. Wrap every `value.X` interpolation in the table builders (lines 15-24, 44-53) with `escapeHTML()`
 3. For the top scorers `<img>` tag (line 74), use `escapeHTML()` on `value.Pic` and wrap `src` in quotes: `<img src="` + escapeHTML(value.Pic) + `">`
@@ -49,6 +54,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 5. Handle `null` entries in `lfl-scorers.json` -- skip entries where `value.Player` is `null`, or display a placeholder
 
 **Acceptance criteria:**
+
 - Standings tables render correctly on `table.html`
 - Top scorers shows placeholder for null entries (not literal "null")
 - Inject `<script>alert(1)</script>` into a JSON field temporarily; confirm it renders as escaped text
@@ -60,14 +66,17 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Description:** Phone fields use `type="number"`, which strips leading zeros, shows spinners, and rejects `+` prefix.
 
 **Files to modify:**
+
 - `solo.html` (line 95)
 - `team.html` (line 184)
 
 **Steps:**
+
 1. Change `type="number"` to `type="tel"` on the phone `<input>` in both files
 2. Optionally add `pattern="[\+]?[\d\s\-]{10,15}"` for basic validation
 
 **Acceptance criteria:**
+
 - Phone fields show no increment/decrement spinners
 - Users can type leading zeros and `+` prefix
 - `required` attribute still enforces non-empty
@@ -79,15 +88,18 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Description:** `team.html` form `action` URL (line 71) points to one Google Forms endpoint, but `submit-team.js` (line 18) submits via `fetch()` to a completely different endpoint. Since JS calls `preventDefault()`, the form action never fires, but if JS fails the wrong endpoint is used.
 
 **Files to modify:**
+
 - `team.html` (line 71)
 - `scripts/submit-team.js` (line 18)
 
 **Steps:**
+
 1. Determine which Google Forms endpoint is correct (check Google Forms dashboard)
 2. Update both the `<form action>` and the `fetch()` URL to use the same endpoint
 3. Remove `target="hidden_iframe"` from the team form (no hidden iframe exists on this page)
 
 **Acceptance criteria:**
+
 - Test team submission arrives in the correct Google Form
 - `<form action>` URL matches the `fetch()` URL
 - No `target="hidden_iframe"` on team form
@@ -99,9 +111,11 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Description:** `about.html` line 137 has `onload="if(submitted) {window.location='https://www.google.com';}"`. After form submission, users are redirected away from the site.
 
 **Files to modify:**
+
 - `about.html` (lines 130-138)
 
 **Steps:**
+
 1. Refactor to use the same `fetch()` pattern as `submit-solo.js` / `submit-team.js`:
    - Remove the hidden iframe entirely
    - Remove the `var submitted = false;` script
@@ -111,6 +125,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 2. Show the existing `#confirmation` div on success
 
 **Acceptance criteria:**
+
 - Submit the contact form; user stays on the LFL site
 - Success message appears
 - Form data still reaches the Google Forms endpoint
@@ -122,9 +137,11 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Description:** At least 3 different navigation structures exist. `index.html` says "SEASON 2026", most pages say "SEASON 2024", `results.html` and `fixture.html` have a completely different nav.
 
 **Files to modify:**
+
 - All 10 root-level HTML files
 
 **Steps:**
+
 1. Define the canonical navigation:
    ```html
    <ul>
@@ -141,6 +158,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 4. Remove hardcoded years ("2020", "2022", "2023") from all footers
 
 **Acceptance criteria:**
+
 - All pages show identical menu items in the same order
 - Correct page highlighted with `class="active"`
 - No page references "2023" or "2024" in nav links
@@ -151,6 +169,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 ### Task 1.7: Fix all typos
 
 **Files to modify:**
+
 - `solo.html` line 156: "Trank" -> "Thank"
 - `team.html` line 233: "Trank" -> "Thank"
 - `team.html` line 99: "wheter" -> "whether"
@@ -175,10 +194,12 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Files to modify:** All 10 root-level HTML files
 
 **Steps:**
+
 1. Remove the `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />` from every HTML file
 2. Keep the `<script src="https://kit.fontawesome.com/f40b0e79f9.js">` line
 
 **Acceptance criteria:**
+
 - All FA icons render on every page
 - Only one FA network request (the Kit JS) in DevTools
 - No missing icon squares
@@ -190,19 +211,21 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Description:** jQuery 3.5.1 (290KB unminified) is loaded on every page but used only for the hamburger toggle (6 inline lines) and `standings.js`. Both are trivially replaceable.
 
 **Files to modify:**
+
 - All 10 root-level HTML files
 - `scripts/standings.js` (full rewrite)
 - `scripts/hamburger.js` (overwrite with vanilla JS)
 
 **Steps:**
+
 1. Overwrite `scripts/hamburger.js` with vanilla JS:
    ```javascript
-   document.addEventListener('DOMContentLoaded', function () {
-     var toggle = document.querySelector('.toggle');
-     var nav = document.querySelector('nav');
-     toggle.addEventListener('click', function () {
-       toggle.classList.toggle('active');
-       nav.classList.toggle('active');
+   document.addEventListener("DOMContentLoaded", function () {
+     var toggle = document.querySelector(".toggle");
+     var nav = document.querySelector("nav");
+     toggle.addEventListener("click", function () {
+       toggle.classList.toggle("active");
+       nav.classList.toggle("active");
      });
    });
    ```
@@ -213,6 +236,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 6. Replace all `var` with `const`/`let` in the rewritten file
 
 **Acceptance criteria:**
+
 - No jQuery loaded on any page (verify in DevTools Network tab)
 - Hamburger menu works on all pages at mobile widths
 - Standings and top scorers render correctly on `table.html`
@@ -223,17 +247,20 @@ Bugs, security issues, and broken functionality affecting users right now.
 ### Task 2.3: Add lazy loading to images
 
 **Files to modify:**
+
 - `media.html` (gallery images)
 - `teams.html` (team card images)
 - `whats-futsal.html` (card images)
 - `about.html` (mission image, affiliates image)
 
 **Steps:**
+
 1. Add `loading="lazy"` to every `<img>` tag below the fold
 2. Do NOT add it to header logos or hero content (above the fold)
 3. Remove empty `srcset=""` attributes from `whats-futsal.html`
 
 **Acceptance criteria:**
+
 - DevTools Network: images below fold don't load until scrolled into view
 - No broken images
 - No empty `srcset` attributes remain
@@ -245,15 +272,22 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Files to modify:** All 10 root-level HTML files
 
 **Steps:**
+
 1. Add to every page's `<head>`:
    ```html
-   <meta name="description" content="[page-specific, 120-160 chars]">
-   <meta property="og:title" content="[page title]">
-   <meta property="og:description" content="[same as meta description]">
-   <meta property="og:image" content="https://www.londonfutsalleague.com/img/lfl-og.jpg">
-   <meta property="og:url" content="https://www.londonfutsalleague.com/[page].html">
-   <meta property="og:type" content="website">
-   <link rel="icon" type="image/svg+xml" href="/img/lfl.svg">
+   <meta name="description" content="[page-specific, 120-160 chars]" />
+   <meta property="og:title" content="[page title]" />
+   <meta property="og:description" content="[same as meta description]" />
+   <meta
+     property="og:image"
+     content="https://www.londonfutsalleague.com/img/lfl-og.jpg"
+   />
+   <meta
+     property="og:url"
+     content="https://www.londonfutsalleague.com/[page].html"
+   />
+   <meta property="og:type" content="website" />
+   <link rel="icon" type="image/svg+xml" href="/img/lfl.svg" />
    ```
 2. Write unique descriptions per page, e.g.:
    - index.html: "London Futsal League - Competitive futsal in Brixton and North Finchley. Register your team or join as a solo player for the 2026 season."
@@ -262,6 +296,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 4. Improve `<title>` tags: "London Futsal League | Home" instead of "LFL | Home"
 
 **Acceptance criteria:**
+
 - Favicon appears in browser tab on all pages
 - OG tags validate via opengraph.xyz or Facebook Sharing Debugger
 - Every page has a unique `<meta name="description">`
@@ -271,10 +306,12 @@ Bugs, security issues, and broken functionality affecting users right now.
 ### Task 2.5: Create robots.txt and sitemap.xml
 
 **Files to create:**
+
 - `robots.txt`
 - `sitemap.xml`
 
 **Steps:**
+
 1. Create `robots.txt`:
    ```
    User-agent: *
@@ -292,6 +329,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 2. Create `sitemap.xml` listing all 10 pages with `<lastmod>` and `<priority>` values
 
 **Acceptance criteria:**
+
 - Both files accessible at their root URLs
 - Valid XML in sitemap
 - Google Search Console can parse the sitemap after deployment
@@ -303,6 +341,7 @@ Bugs, security issues, and broken functionality affecting users right now.
 **Files to modify:** `.htaccess`
 
 **Steps:** Add after the existing HTTPS rewrite:
+
 ```apache
 # Security Headers
 Header always set X-Content-Type-Options "nosniff"
@@ -336,6 +375,7 @@ Options -Indexes
 ```
 
 **Acceptance criteria:**
+
 - Security headers present in DevTools response headers
 - `data/futsal.docx` returns 403
 - Directory browsing returns 403
@@ -348,10 +388,12 @@ Options -Indexes
 **Files to modify:** `.htaccess`
 
 **Steps:**
+
 1. Add: `RedirectMatch 404 ^/v[0-9]`
 2. Add `v0*/` and `v1/` to `.gitignore` (created in Phase 3)
 
 **Acceptance criteria:**
+
 - `http://localhost/LFL/v0/` and `http://localhost/LFL/v1/index.html` return 404
 - Folders preserved in git history
 
@@ -362,12 +404,14 @@ Options -Indexes
 **Files to modify:** `index.html` (lines 11-24), plus add to all other pages
 
 **Steps:**
+
 1. Obtain GA4 measurement ID (`G-XXXXXXXXXX`)
 2. Replace UA script block with GA4 snippet
 3. Add GA4 snippet to all pages (not just index.html)
 4. Ensure CookieYes consent fires before analytics
 
 **Acceptance criteria:**
+
 - GA4 Realtime report shows pageviews
 - No UA scripts remain
 - Analytics present on all pages
@@ -377,19 +421,23 @@ Options -Indexes
 ### Task 2.9: Clean up dead/duplicate JavaScript files
 
 **Files to delete:**
+
 - `scripts/submit-form.js` (exact duplicate of `submit-solo.js`)
 - `scripts/media.js` (empty file)
 
 **Files to clean:**
+
 - `scripts/svalidation.js` (remove ~87 lines of commented-out code)
 
 **Steps:**
+
 1. Grep for `submit-form.js` in all HTML files to confirm no references
 2. Delete `submit-form.js` and `media.js`
 3. Remove `<script src="scripts/media.js">` from `media.html`
 4. Remove all commented-out code from `svalidation.js`
 
 **Acceptance criteria:**
+
 - No dead JS files in `scripts/`
 - No `<script>` tags pointing to deleted files
 - No console errors on any page
@@ -401,22 +449,27 @@ Options -Indexes
 Before Phase 3, install and configure the following:
 
 ### P1: Install Node.js and npm
+
 - Install Node.js LTS (v20+)
 - Verify: `node --version` and `npm --version`
 
 ### P2: Initialise npm project
+
 - `npm init -y` in the LFL root directory
 
 ### P3: Install Eleventy
+
 - `npm install --save-dev @11ty/eleventy`
 - Create `.eleventy.js` config
 
 ### P4: Install CSS/JS tooling
+
 - `npm install --save-dev postcss autoprefixer cssnano postcss-cli`
 - `npm install --save-dev terser`
 - Optionally: `npm install --save-dev sharp` for image processing
 
 ### P5: Create `.gitignore`
+
 ```
 node_modules/
 _site/
@@ -436,6 +489,7 @@ data/NextSeason.txt
 ```
 
 ### P6: Add npm scripts to package.json
+
 ```json
 {
   "scripts": {
@@ -456,6 +510,7 @@ data/NextSeason.txt
 ### Task 3.1: Create `.gitignore` and clean up repository
 
 **Steps:**
+
 1. Create `.gitignore` with contents from P5
 2. `git rm --cached .vscode/settings.json`
 3. `git rm --cached data/futsal.docx data/NextSeason.txt`
@@ -470,6 +525,7 @@ data/NextSeason.txt
 **Description:** Extract the duplicated header, nav, footer, aside, and `<head>` into shared Nunjucks partials.
 
 **Files to create:**
+
 - `.eleventy.js`
 - `src/_includes/base.njk` (base layout)
 - `src/_includes/header.njk`
@@ -479,12 +535,13 @@ data/NextSeason.txt
 - Convert all 10 HTML files to `src/*.njk` with front matter
 
 **Steps:**
+
 1. Create directory structure: `src/`, `src/_includes/`, `src/_data/`
 2. Create `.eleventy.js` with passthrough copies for `img/`, `css/`, `scripts/`, `data/`, `.htaccess`
 3. Extract common `<head>` into `head.njk`
 4. Extract header+nav into `header.njk` with variable-based `class="active"`:
    ```html
-   <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+   <a href="/" {% if page.url="" ="/" %}class="active" {% endif %}>Home</a>
    ```
 5. Extract footer into `footer.njk`
 6. Create `base.njk` assembling all partials around a `{% block content %}` block
@@ -499,6 +556,7 @@ data/NextSeason.txt
 8. Test with `npx eleventy --serve`
 
 **Acceptance criteria:**
+
 - `npm run build` generates `_site/` with all HTML pages
 - Navigation identical on every generated page
 - Changing nav in `header.njk` propagates to all pages on rebuild
@@ -509,11 +567,13 @@ data/NextSeason.txt
 ### Task 3.3: Set up CSS build pipeline
 
 **Files to create/modify:**
+
 - Create `postcss.config.js`
 - Fix `css/forms.css` line 75: `font-size: 200` -> `font-size: 200%`
 - Refactor `css/home.css`: replace float layout with flexbox, remove `.clearfix`
 
 **Steps:**
+
 1. Create PostCSS config with autoprefixer + cssnano
 2. Fix invalid `font-size: 200` in `forms.css`
 3. Replace header float layout with flexbox in `home.css`
@@ -522,6 +582,7 @@ data/NextSeason.txt
 6. Add CSS build step to Eleventy pipeline
 
 **Acceptance criteria:**
+
 - CSS autoprefixed and minified in `_site/css/`
 - No invalid CSS properties
 - Header uses flexbox, no float/clearfix
@@ -532,11 +593,13 @@ data/NextSeason.txt
 ### Task 3.4: Bundle and minify JavaScript
 
 **Steps:**
+
 1. Replace all `var` with `const`/`let` in source JS files
 2. Use terser to minify each JS file during build
 3. Consider consolidating the three form scripts into a single configurable `form-handler.js`
 
 **Acceptance criteria:**
+
 - All JS in `_site/scripts/` is minified
 - No `var` declarations in source
 - All scripts function after minification
@@ -547,6 +610,7 @@ data/NextSeason.txt
 ### Task 3.5: Add ARIA attributes, keyboard navigation, and skip links
 
 **Files to modify:**
+
 - `src/_includes/header.njk`
 - `src/_includes/base.njk`
 - `scripts/hamburger.js`
@@ -554,6 +618,7 @@ data/NextSeason.txt
 - All form page templates
 
 **Steps:**
+
 1. Add skip-to-content link as first `<body>` element (visually hidden, visible on focus)
 2. Add `id="main-content"` to `<main>` on every page
 3. Convert hamburger `<div class="toggle">` to `<button>` with `aria-label` and `aria-expanded`
@@ -570,6 +635,7 @@ data/NextSeason.txt
    ```
 
 **Acceptance criteria:**
+
 - Tab through page: skip link appears, hamburger focusable, all elements reachable
 - Screen reader announces nav, form labels, error messages
 - `aria-expanded` toggles on hamburger
@@ -587,6 +653,7 @@ data/NextSeason.txt
 **Files to modify:** `.htaccess`
 
 **Steps:**
+
 1. Create `404.njk` using base layout with friendly message, LFL logo, links to key pages
 2. Add `ErrorDocument 404 /404.html` to `.htaccess`
 
@@ -597,6 +664,7 @@ data/NextSeason.txt
 ### Task 4.2: Optimise images (WebP, compression, naming)
 
 **Steps:**
+
 1. Create build script using `sharp`:
    - Convert JPG/PNG to WebP (quality 80)
    - Generate thumbnails (300px wide) for gallery use
@@ -606,6 +674,7 @@ data/NextSeason.txt
 5. Add descriptive `alt` text to all images (many have `alt=""`)
 
 **Acceptance criteria:**
+
 - No BMP files remain
 - All gallery images have WebP versions
 - Thumbnails used in grids (not full-size scaled down)
@@ -618,6 +687,7 @@ data/NextSeason.txt
 **Files to modify:** `css/home.css`, `css/media.css`
 
 **Steps:**
+
 1. Fix hero: keep overlay on mobile, do NOT hide venue info
 2. Use CSS Grid for team cards with consistent heights:
    ```css
@@ -631,6 +701,7 @@ data/NextSeason.txt
 4. Replace all `&nbsp;`, empty `<p>`, and `<br>` spacers with CSS margins
 
 **Acceptance criteria:**
+
 - Hero correct on mobile (320px, 375px, 414px)
 - Venue info visible at all sizes
 - Team cards uniform height
@@ -641,6 +712,7 @@ data/NextSeason.txt
 ### Task 4.4: Implement GDPR compliance
 
 **Steps:**
+
 1. Move CookieYes script to shared `head.njk` (all pages)
 2. Defer analytics until cookie consent granted
 3. Fix GDPR text: "not a third parties" -> "not shared with third parties"
@@ -648,6 +720,7 @@ data/NextSeason.txt
 5. Link to privacy policy from all form GDPR notices and footer
 
 **Acceptance criteria:**
+
 - Cookie banner on every page
 - Analytics only fires after consent
 - Privacy policy linked from footer and forms
@@ -659,6 +732,7 @@ data/NextSeason.txt
 **Files to create:** `manifest.json`, `sw.js`, PNG icons at 192px and 512px
 
 **Steps:**
+
 1. Create manifest with LFL branding and theme colour `#00aefd`
 2. Generate PNG icons from SVG logo
 3. Add manifest link and theme-color meta to shared head
@@ -666,6 +740,7 @@ data/NextSeason.txt
 5. Register service worker from `main.js`
 
 **Acceptance criteria:**
+
 - Lighthouse PWA audit detects manifest
 - "Add to Home Screen" available on mobile
 - Site shell loads offline
@@ -674,15 +749,15 @@ data/NextSeason.txt
 
 ## Files Modified Most Across All Phases
 
-| File | Tasks |
-|------|-------|
-| All 10 HTML files | 1.6, 2.1, 2.2, 2.3, 2.4, 2.8 |
-| `.htaccess` | 2.6, 2.7, 4.1 |
-| `scripts/standings.js` | 1.2, 2.2 |
-| `css/home.css` | 3.3, 3.5, 4.3 |
-| `css/forms.css` | 3.3 |
-| `scripts/hamburger.js` | 2.2, 3.5 |
-| `scripts/main.js` | 4.5 |
+| File                   | Tasks                        |
+| ---------------------- | ---------------------------- |
+| All 10 HTML files      | 1.6, 2.1, 2.2, 2.3, 2.4, 2.8 |
+| `.htaccess`            | 2.6, 2.7, 4.1                |
+| `scripts/standings.js` | 1.2, 2.2                     |
+| `css/home.css`         | 3.3, 3.5, 4.3                |
+| `css/forms.css`        | 3.3                          |
+| `scripts/hamburger.js` | 2.2, 3.5                     |
+| `scripts/main.js`      | 4.5                          |
 
 ---
 

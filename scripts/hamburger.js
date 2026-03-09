@@ -1,9 +1,10 @@
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "inline-block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "inline-block";
-    }
-} 
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".toggle");
+  const nav = document.querySelector("nav");
+  if (!toggle || !nav) return;
+  toggle.addEventListener("click", function () {
+    const isActive = toggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    toggle.setAttribute("aria-expanded", isActive ? "true" : "false");
+  });
+});

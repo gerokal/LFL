@@ -8,19 +8,27 @@
       src="https://cdn-cookieyes.com/client_data/31a19c615b873054bfe455e8/script.js"
     ></script>
     <!-- End cookieyes banner -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-71227360-1"
-    ></script>
+    <!-- Google Analytics - deferred until cookie consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-
-      gtag("config", "UA-71227360-1");
+      function loadAnalytics() {
+        var script = document.createElement("script");
+        script.async = true;
+        script.src =
+          "https://www.googletagmanager.com/gtag/js?id=UA-71227360-1";
+        document.head.appendChild(script);
+        gtag("js", new Date());
+        gtag("config", "UA-71227360-1");
+      }
+      document.addEventListener("cookieyes_consent_update", function (e) {
+        var detail = e.detail;
+        if (detail.accepted && detail.accepted.indexOf("analytics") !== -1) {
+          loadAnalytics();
+        }
+      });
     </script>
 
     <meta charset="UTF-8" />
@@ -30,16 +38,20 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <script
       src="https://kit.fontawesome.com/f40b0e79f9.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <title>LFL | Home</title>
+    <title>London Futsal League | Home</title>
+    <meta name="description" content="London Futsal League - Competitive futsal in Brixton and North Finchley. Register your team or join as a solo player for the 2026 season." />
+    <meta property="og:title" content="London Futsal League | Home" />
+    <meta property="og:description" content="London Futsal League - Competitive futsal in Brixton and North Finchley. Register your team or join as a solo player for the 2026 season." />
+    <meta property="og:image" content="https://www.londonfutsalleague.com/img/lfl-og.jpg" />
+    <meta property="og:url" content="https://www.londonfutsalleague.com/index.html" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/img/lfl.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00aefd" />
   </head>
   <body>
     <!-- Messenger Chat plugin Code -->
@@ -85,22 +97,13 @@
               <li><a href="index.html" class="active">Home</a></li>
               <li><a href="free-games.html">Free Games</a></li>
               <li><a href="whats-futsal.html">What is Futsal?</a></li>
-              <!-- <li><a href="table.html">Table</a></li> -->
               <li><a href="teams.html">Teams</a></li>
-              <li><a href="media.html">SEASON 2026</a></li>
+              <li><a href="media.html">Season 2026</a></li>
               <li><a href="about.html">About</a></li>
             </ul>
           </nav>
           <div class="clearfix"></div>
         </header>
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $(".toggle").click(function () {
-              $(".toggle").toggleClass("active");
-              $("nav").toggleClass("active");
-            });
-          });
-        </script>
         <main>
           <div class="hero">
             <!-- video  -->
@@ -118,7 +121,7 @@
               width="100%"
               height="100%"
             ></iframe> -->
-              <script2026
+              <script
                 src="https://fast.wistia.com/embed/medias/8iz41qe27d.jsonp"
                 async
               ></script>
@@ -221,8 +224,12 @@
             </a>
           </p>
         </div>
+        <div id="privacy-link">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
       </footer>
     </div>
+    <script src="/scripts/hamburger.js"></script>
     <script src="/scripts/main.js"></script>
   </body>
 </html>

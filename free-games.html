@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Start cookieyes banner -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/31a19c615b873054bfe455e8/script.js"
+    ></script>
+    <!-- End cookieyes banner -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/home.css" />
@@ -9,16 +16,20 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <script
       src="https://kit.fontawesome.com/f40b0e79f9.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <title>LFL | Free Games</title>
+    <title>London Futsal League | Free Games</title>
+    <meta name="description" content="Host free futsal games across London with the LFL. Step-by-step guide on how to organise and host casual futsal sessions." />
+    <meta property="og:title" content="London Futsal League | Free Games" />
+    <meta property="og:description" content="Host free futsal games across London with the LFL. Step-by-step guide on how to organise and host casual futsal sessions." />
+    <meta property="og:image" content="https://www.londonfutsalleague.com/img/lfl-og.jpg" />
+    <meta property="og:url" content="https://www.londonfutsalleague.com/free-games.html" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/img/lfl.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00aefd" />
   </head>
   <body>
     <div class="container">
@@ -33,22 +44,13 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="free-games.html" class="active">Free Games</a></li>
               <li><a href="whats-futsal.html">What is Futsal?</a></li>
-              <!-- <li><a href="table.html">Table</a></li> -->
               <li><a href="teams.html">Teams</a></li>
-              <li><a href="media.html">SEASON 2024</a></li>
+              <li><a href="media.html">Season 2026</a></li>
               <li><a href="about.html">About</a></li>
             </ul>
           </nav>
           <div class="clearfix"></div>
         </header>
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $(".toggle").click(function () {
-              $(".toggle").toggleClass("active");
-              $("nav").toggleClass("active");
-            });
-          });
-        </script>
         <main class="grid">
           <section id="section">
             <div class="section-wraper">
@@ -68,7 +70,6 @@
                       futsal games in smooth way and nice atmosphere, so
                       everyone can enjoy of this lovely sport!
                     </p>
-                    <p>&nbsp;</p>
                     <p>
                       Here are the steps that the Host/Coordinator can do to
                       create a pleasant atmosphere and for the game to go
@@ -139,8 +140,6 @@
                     </div>
                   </div>
                   <div>
-                    <p>&nbsp;</p>
-                    <p></p>
                     <p>
                       Some things our hosts do to make games that little bit
                       better:
@@ -175,16 +174,13 @@
                     </ul>
                   </div>
                   <div>
-                    <p>&nbsp;</p>
                     <p>
                       All our reliable futsal host will get futsal balls once
                       they become regular LFL players.
                     </p>
-                    <p></p>
                   </div>
                   <div class="flex-container cta-free-games">
                     <h3>What are you waiting for?</h3>
-                    <p>&nbsp;</p>
                     <p>Get in touch and send your interest:</p>
                     <ul>
                       <li>
@@ -231,44 +227,26 @@
         </main>
       </div>
       <footer>
-        <div>
-          <div>
-            <span class="icon-foot">
-              <a href="index.html"><img src="img/lfl.svg" alt="LFl logo" /></a>
-            </span>
-            <p class="year">&nbsp;&copy; 2022 | London Futsal League</p>
-          </div>
-          <br />
-          <div>
-            <span class="icon-foot">
-              <i class="fas fa-envelope fa-2x"></i>&nbsp;&nbsp;
-            </span>
-            <p>
-              <a href="mailto:contact@londonfutsalleague.com"
-                >contact@londonfutsalleague.com</a
-              >
-            </p>
-          </div>
-          <br />
+        <div id="copyright-info">
+          <span class="icon-foot">
+            <a href="index.html">
+              <img src="img/lfl.svg" alt="LFL logo" />
+            </a>
+          </span>
+          <p class="year"></p>
         </div>
-        <div>
-          <div>
-            <span class="icon-foot">
-              <i class="fas fa-user fa-2x"></i>&nbsp;&nbsp;
-            </span>
-            <p>
-              <a href="solo.html">Solo registration</a>
-            </p>
-          </div>
-          <br />
-          <div>
-            <span class="icon-foot">
-              <i class="fas fa-users fa-2x"></i>&nbsp;&nbsp;
-            </span>
-            <p>
-              <a href="team.html">Team registration</a>
-            </p>
-          </div>
+        <div id="contact-info">
+          <span class="icon-foot">
+            <i class="fas fa-envelope fa-2x"></i>
+          </span>
+          <p>
+            <a href="mailto:contact@londonfutsalleague.com">
+              contact@londonfutsalleague.com
+            </a>
+          </p>
+        </div>
+        <div id="privacy-link">
+          <a href="privacy.html">Privacy Policy</a>
         </div>
       </footer>
     </div>
@@ -287,6 +265,7 @@
         e.parentNode.insertBefore(i, e);
       })();
     </script>
+    <script src="/scripts/hamburger.js"></script>
     <script src="/scripts/main.js"></script>
   </body>
 </html>

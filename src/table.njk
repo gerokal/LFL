@@ -1,0 +1,105 @@
+---
+layout: base.njk
+title: "London Futsal League | Standings"
+description: "View the latest London Futsal League standings, league tables, and top scorers for both Clapham Common and North Finchley divisions."
+ogTitle: "London Futsal League | Standings"
+ogDescription: "View the latest London Futsal League standings, league tables, and top scorers for both Clapham Common and North Finchley divisions."
+ogUrl: "table.html"
+activePage: ""
+hasAside: true
+extraCss:
+  - "/css/tables.css"
+pageScripts:
+  - "/scripts/standings.js"
+permalink: "table.html"
+---
+
+<div class="section-wraper">
+  <div class="section-title">
+    <h1>Standings</h1>
+  </div>
+  <div class="section-content">
+    <h2>Autumn Season SEPT to DEC 2022</h2>
+    <div class="card">
+      <h3 class="content-subheading">
+        Clapham Common SOUTH Division
+      </h3>
+      <table id="table-standings-a">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Team</th>
+            <th class="played">P</th>
+            <th class="won">W</th>
+            <th class="draw">D</th>
+            <th class="lost">L</th>
+            <th class="goal-f">GF</th>
+            <th class="goal-a">GA</th>
+            <th class="goal-d">GD</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr class="captions">
+            <td colspan="10"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <!-- end group A-->
+      <h3 class="content-subheading">Tottenham NORTH Division</h3>
+      <table id="table-standings-b">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Team</th>
+            <th class="played">P</th>
+            <th class="won">W</th>
+            <th class="draw">D</th>
+            <th class="lost">L</th>
+            <th class="goal-f">GF</th>
+            <th class="goal-a">GA</th>
+            <th class="goal-d">GD</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr class="captions">
+            <td colspan="10"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <!-- End group B-->
+      <div class="captions">
+        <ul>
+          <li><strong>Pos</strong> = Position</li>
+          <li><strong>P</strong> = Played</li>
+          <li><strong>W</strong> = Won</li>
+          <li><strong>D</strong> = Drawn</li>
+          <li><strong>L</strong> = Lost</li>
+          <li><strong>GF</strong> = Goals For</li>
+          <li><strong>GA</strong> = Goals Against</li>
+          <li><strong>GD</strong> = Goal Difference</li>
+          <li><strong>Pts</strong> = Points</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" id="scorers">
+      <h3 class="content-subheading">Top Scorers</h3>
+      <table id="top-scorers">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th class="p-pic">Pic</th>
+            <th>Player's name</th>
+            <th>Goals</th>
+            <th class="p-team">Player's team</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+  </div>
+</div>

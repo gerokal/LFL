@@ -52,7 +52,7 @@ function validateRegisterForm (e) {
 }
 
 function handle_errors(errs) {
-  let str = "You have errors: Pleaase review the following fields: ";
+  let str = "You have errors: Please review the following fields: ";
 
   errs.map((er) => {
     er.el.classList.add('error');

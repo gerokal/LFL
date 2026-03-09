@@ -1,0 +1,153 @@
+---
+layout: base.njk
+title: "London Futsal League | Home"
+description: "London Futsal League - Competitive futsal in Brixton and North Finchley. Register your team or join as a solo player for the 2026 season."
+ogTitle: "London Futsal League | Home"
+ogDescription: "London Futsal League - Competitive futsal in Brixton and North Finchley. Register your team or join as a solo player for the 2026 season."
+ogUrl: "index.html"
+activePage: "home"
+hasAside: false
+analyticsScript: |
+  <!-- Google Analytics - deferred until cookie consent -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    function loadAnalytics() {
+      var script = document.createElement("script");
+      script.async = true;
+      script.src =
+        "https://www.googletagmanager.com/gtag/js?id=UA-71227360-1";
+      document.head.appendChild(script);
+      gtag("js", new Date());
+      gtag("config", "UA-71227360-1");
+    }
+    document.addEventListener("cookieyes_consent_update", function (e) {
+      var detail = e.detail;
+      if (detail.accepted && detail.accepted.indexOf("analytics") !== -1) {
+        loadAnalytics();
+      }
+    });
+  </script>
+bodyStartContent: |
+  <!-- Messenger Chat plugin Code -->
+  <div id="fb-root"></div>
+  <!-- Your Chat plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "452144844968907");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v13.0",
+      });
+    };
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+permalink: "index.html"
+---
+
+<div class="hero">
+  <!-- video  -->
+  <div class="video-hero">
+    <script
+      src="https://fast.wistia.com/embed/medias/8iz41qe27d.jsonp"
+      async
+    ></script>
+    <script
+      src="https://fast.wistia.com/assets/external/E-v1.js"
+      async
+    ></script>
+    <div
+      class="wistia_responsive_padding"
+      style="padding: 56.25% 0 0 0; position: relative"
+    >
+      <div
+        class="wistia_responsive_wrapper"
+        style="
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        "
+      >
+        <div
+          class="wistia_embed wistia_async_8iz41qe27d videoFoam=true"
+          style="height: 100%; position: relative; width: 100%"
+        >
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end video  -->
+  <div class="hero-title-wrapper">
+    <div class="hero-title">
+      <h1>London Futsal League</h1>
+      <p>Talk with your feet, play with your heart</p>
+      <p>
+        🏆 NEW SEASON from January 2026 <br />
+        ⚽ <b>Brixton</b> (SW2 1QS) &
+        <b>North Finchley</b> (N12 9HB)
+      </p>
+    </div>
+    <div class="social">
+      <ul>
+        <li>
+          <a
+            href="https://www.facebook.com/LondonFutsalLeague/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-facebook-square fa-2x"></i>
+            <span class="sr-only">Facebook (opens in new tab)</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/londonfutsalleague/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-instagram-square fa-2x"></i>
+            <span class="sr-only">Instagram (opens in new tab)</span></a
+          >
+        </li>
+        <li>
+          <a href="https://twitter.com/LondonFutsalLe" target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-twitter-square fa-2x"></i>
+            <span class="sr-only">Twitter (opens in new tab)</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="cta">
+  <div>
+    <a href="/solo.html" class="cta-box">
+      <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+      <h2>Register yourself</h2>
+    </a>
+  </div>
+  <div>
+    <a href="/team.html" class="cta-box">
+      <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+      <h2>Register your team</h2>
+    </a>
+  </div>
+</div>

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Start cookieyes banner -->
+    <script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/31a19c615b873054bfe455e8/script.js"
+    ></script>
+    <!-- End cookieyes banner -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/home.css" />
@@ -9,16 +16,20 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <script
       src="https://kit.fontawesome.com/f40b0e79f9.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <title>LFL | Team Registration</title>
+    <title>London Futsal League | Team Registration</title>
+    <meta name="description" content="Register your futsal team for the London Futsal League. Join our competitive leagues in Clapham Common and North Finchley." />
+    <meta property="og:title" content="London Futsal League | Team Registration" />
+    <meta property="og:description" content="Register your futsal team for the London Futsal League. Join our competitive leagues in Clapham Common and North Finchley." />
+    <meta property="og:image" content="https://www.londonfutsalleague.com/img/lfl-og.jpg" />
+    <meta property="og:url" content="https://www.londonfutsalleague.com/team.html" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/img/lfl.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#00aefd" />
   </head>
   <body>
     <div class="container">
@@ -33,22 +44,13 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="free-games.html">Free Games</a></li>
               <li><a href="whats-futsal.html">What is Futsal?</a></li>
-              <!-- <li><a href="table.html">Table</a></li> -->
               <li><a href="teams.html">Teams</a></li>
-              <li><a href="media.html">SEASON 2024</a></li>
+              <li><a href="media.html">Season 2026</a></li>
               <li><a href="about.html">About</a></li>
             </ul>
           </nav>
           <div class="clearfix"></div>
         </header>
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $(".toggle").click(function () {
-              $(".toggle").toggleClass("active");
-              $("nav").toggleClass("active");
-            });
-          });
-        </script>
         <main class="grid">
           <section id="section">
             <div class="section-wraper">
@@ -68,9 +70,8 @@
               <div class="contact-form">
                 <form
                   id="form-team"
-                  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdTN6B5D3s2dGTQC_jGereKOLD-eP-c88dTKmBXRE5GDm4_hA/formResponse"
+                  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6MdPJsHIGLcL-GVDkmQ7V_H9u0yjBVI7TfwFhAo7fbecNSA/formResponse"
                   method="POST"
-                  target="hidden_iframe"
                 >
                   <div class="la-in">
                     <label for="tname">Team name</label>
@@ -96,7 +97,7 @@
                       required
                     />
                     <p class="form-placeholder">
-                      Please state wheter your team is affiliated to any London
+                      Please state whether your team is affiliated to any London
                       FA. If so, name it.
                     </p>
                   </div>
@@ -181,10 +182,11 @@
                     <div class="la-in">
                       <label for="pic_phone">Phone</label>
                       <input
-                        type="number"
+                        type="tel"
                         id="pic_phone"
                         name="entry.46084750"
                         placeholder="Person in charge phone"
+                        pattern="[\+]?[\d\s\-]{10,15}"
                         required
                       />
                     </div>
@@ -230,7 +232,7 @@
                     <div class="errors"></div>
                     <div id="confirmation">
                       <h2>
-                        Trank you for registering. We will contact you shortly
+                        Thank you for registering. We will contact you shortly
                       </h2>
                       <div>
                         <ul>
@@ -247,8 +249,9 @@
                           The data shared with us through this website will be
                           used ONLY for the management of your attendance with
                           LFL futsal teams, and futsal casual games in London,
-                          and not a third parties.
+                          and not shared with third parties.
                         </em>
+                        <a href="privacy.html">Privacy Policy</a>
                       </p>
                     </div>
                     <div class="btn-group">
@@ -310,6 +313,9 @@
             </a>
           </p>
         </div>
+        <div id="privacy-link">
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
       </footer>
     </div>
 
@@ -329,6 +335,7 @@
         e.parentNode.insertBefore(i, e);
       })();
     </script>
+    <script src="/scripts/hamburger.js"></script>
     <script src="/scripts/main.js"></script>
     <script src="/scripts/submit-team.js"></script>
   </body>
