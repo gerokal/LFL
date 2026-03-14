@@ -17,7 +17,31 @@
       </a>
     </p>
   </div>
-  <div id="privacy-link">
-    <a href="/privacy.html">Privacy Policy</a>
+  <div id="instagram-link">
+    <span class="icon-foot">
+      <i class="fab fa-instagram fa-2x"></i>
+    </span>
+    <p>
+      <a href="https://www.instagram.com/londonfutsalleague" target="_blank" rel="noopener noreferrer">
+        DM us on Instagram
+      </a>
+    </p>
   </div>
+  {% if not isHome %}
+  <div id="footer-registration">
+    <div class="footer-reg-link">
+      <a href="/solo.html">
+        <i class="fas fa-user fa-2x"></i>
+        <span>Solo registration</span>
+      </a>
+    </div>
+    <div class="footer-reg-link">
+      <a href="/team.html">
+        <i class="fas fa-users fa-2x"></i>
+        <span>Team registration</span>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+
 </footer>

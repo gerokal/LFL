@@ -22,6 +22,17 @@ form label {
   padding-bottom: 0.5em;
 }
 
+.privacy-notice {
+  font-size: 0.85em;
+  color: #666;
+  text-align: center;
+  margin: 1em 0 0.5em;
+}
+.privacy-notice a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .btn-group {
   justify-content: space-around;
   text-align: center;
@@ -70,9 +81,14 @@ legend {
 #confirmation {
   display: none;
   margin: 0 0 2em 0;
-  padding: 1em;
-  background: #bbffbb;
-  font-size: 200%;
+  padding: 1.5em;
+  background: #e0f4ff;
+  border-radius: 0.5em;
+  text-align: center;
+}
+#confirmation p {
+  margin-top: 1em;
+  text-align: center;
 }
 #confirmation ul {
   list-style-type: none;

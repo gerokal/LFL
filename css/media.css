@@ -1,5 +1,6 @@
 .media-gallery img{
     max-width: 200px;
+    height: auto;
     margin: 0.25em;
     border: solid 2px #fff;
     box-shadow: #ccc 3px 3px;

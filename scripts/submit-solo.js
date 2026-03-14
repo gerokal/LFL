@@ -26,11 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         );
 
-        //alert("Form submitted successfully");
-        alert(
-          `Thank you for registering ${fname.value}! We will contact you shortly.`
-        );
-        form.reset(); // Reset the form after successful submission
+        document.getElementById("confirmation").style.display = "block";
+        form.reset();
       } catch (error) {
         console.error("Form submission failed", error);
         // Handle the error here

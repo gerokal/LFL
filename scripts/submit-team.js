@@ -26,18 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         );
 
-        //alert("Form submitted successfully");
-        alert(
-          `Thank you for submitting your interest, one of the LFL staff will contact you with further information within a couple of days.`
-        );
-        form.reset(); // Reset the form after successful submission
+        document.getElementById("confirmation").style.display = "block";
+        form.reset();
       } catch (error) {
         console.error("Form submission failed", error);
-        // Handle the error here
-        console.log(error);
       }
     } else {
-      // The form is not valid, show an error message or take appropriate action
       alert("Please fill out all required fields.");
     }
   });
