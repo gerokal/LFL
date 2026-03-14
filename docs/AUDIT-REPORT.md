@@ -165,14 +165,15 @@ Every page loads the following in `<head>` before any content renders:
 - `submit-form.js` is an exact duplicate of `submit-solo.js`.
 - `media.js` is an empty file.
 
-### 4.3 Image Optimisation
-- No `srcset` or `sizes` attributes for responsive images
-- No `loading="lazy"` on any images
-- Images are served in original format (JPG, PNG, BMP) - no WebP/AVIF
-- Team logos have spaces in filenames (e.g., `london galaxy.jpeg`, `Rush Hour fc.png`) - requires URL encoding
-- A `.bmp` file exists (`IFE.bmp`) - extremely inefficient format
-- No image compression pipeline
-- Gallery thumbnails on media.html are full-size images scaled down via CSS `max-width: 200px`
+### 4.3 Image Optimisation ✅ RESOLVED
+- ~~No `srcset` or `sizes` attributes for responsive images~~
+- ~~No `loading="lazy"` on any images~~ → `loading="lazy"` added during Phases 1-4
+- ~~Images are served in original format (JPG, PNG, BMP) - no WebP/AVIF~~ → WebP conversion via Sharp build pipeline (`build-img.js`), 66% payload reduction
+- ~~Team logos have spaces in filenames (e.g., `london galaxy.jpeg`, `Rush Hour fc.png`)~~ → All renamed to lowercase-hyphenated format
+- ~~A `.bmp` file exists (`IFE.bmp`)~~ → Deleted
+- ~~No image compression pipeline~~ → `npm run build:img` generates WebP + thumbnails
+- ~~Gallery thumbnails on media.html are full-size images scaled down via CSS~~ → 300px WebP thumbnails generated and used in grid
+- All `<img>` tags now include `width`/`height` attributes and use `<picture>` elements with WebP source + original fallback
 
 ### 4.4 Archived Versions Bloat
 Folders `v0/`, `v0.1/`, `v0.2/`, `v0.3/`, `v0.4/`, `v0.5/`, `v1/` contain complete copies of the site from previous iterations. These ship to production and add significant disk/transfer weight. They should be removed from the deployment (preserved in git history).
@@ -250,10 +251,10 @@ No page has:
 - Multiple `<h1>` elements are semantically fine in HTML5 but search engines prefer a single `<h1>`
 - Hero section on index.html has `<h1>London Futsal League` - good, but lacks supporting metadata
 
-### 6.4 Image SEO
-- Many images have empty `alt=""` attributes (media.html gallery, whats-futsal.html cards)
-- `srcset=""` (empty) attributes on whats-futsal.html images - should be removed
-- Image filenames use spaces and mixed case, poor for URL consistency
+### 6.4 Image SEO ✅ PARTIALLY RESOLVED
+- ~~Many images have empty `alt=""` attributes~~ → Descriptive alt text added during Phases 1-4
+- ~~`srcset=""` (empty) attributes on whats-futsal.html images~~ → Removed during Eleventy migration
+- ~~Image filenames use spaces and mixed case~~ → All renamed to lowercase-hyphenated format
 
 ### 6.5 URL Structure
 - No clean URLs (pages end in `.html`)
@@ -371,7 +372,7 @@ Every page contains an inline `<script>` block for the jQuery hamburger toggle r
 | 9 | Remove duplicate Font Awesome 4.7 CSS (keep Kit only) | 30 min |
 | 10 | Add meta descriptions, OG tags, favicon, robots.txt, sitemap.xml | 3 hrs |
 | 11 | Add `loading="lazy"` to images | 1 hr |
-| 12 | Optimise images (WebP, compress, proper naming) | 4 hrs |
+| 12 | ~~Optimise images (WebP, compress, proper naming)~~ ✅ | Done |
 | 13 | Remove archived v0-v1 folders from deployment | 1 hr |
 | 14 | Add security headers to .htaccess | 1 hr |
 | 15 | Migrate from UA to GA4 | 1 hr |

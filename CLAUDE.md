@@ -17,8 +17,9 @@ Static HTML/CSS/JS website for the London Futsal League, built with Eleventy (11
 - **Eleventy 3.x** - compiles `src/*.njk` → `_site/*.html`
 - **PostCSS** with autoprefixer + cssnano - `css/*.css` → `_site/css/*.css`
 - **Terser** via `build-js.js` - `scripts/*.js` → `_site/scripts/*.js`
+- **Sharp** via `build-img.js` - converts images to WebP, generates thumbnails for gallery
 - **npm scripts**: `npm run build` (full build), `npm run serve` (Eleventy dev server)
-- Config: `.eleventy.js`, `postcss.config.js`, `build-js.js`
+- Config: `.eleventy.js`, `postcss.config.js`, `build-js.js`, `build-img.js`
 
 ## Key Conventions
 - All pages use Nunjucks templates extending `src/_includes/base.njk`
@@ -31,6 +32,9 @@ Static HTML/CSS/JS website for the London Futsal League, built with Eleventy (11
 - Hamburger menu uses vanilla JS (`scripts/hamburger.js`) with ARIA attributes
 - Skip-to-content link on every page for accessibility
 - CookieYes cookie consent banner on all pages
+- Images use `<picture>` elements with WebP source + original fallback
+- All `<img>` tags include `width` and `height` attributes to prevent CLS
+- Image filenames are lowercase with hyphens (no spaces or mixed case)
 
 ## Template System (Eleventy)
 Each page is a `.njk` file in `src/` with front matter:
@@ -116,6 +120,7 @@ No automated test suite. To verify changes:
 - Eleventy config: `.eleventy.js`
 - PostCSS config: `postcss.config.js`
 - JS build script: `build-js.js`
+- Image build script: `build-img.js`
 - Main stylesheet: `css/home.css`
 - Build output: `_site/`
 - League data: `data/lfl-standings-*.json`, `data/lfl-scorers.json`
@@ -126,9 +131,6 @@ No automated test suite. To verify changes:
 
 ## Remaining Known Issues
 - Google Analytics still uses deprecated Universal Analytics (UA) instead of GA4
-- No responsive images (no srcset, no WebP/AVIF conversion, no compression pipeline)
-- Gallery thumbnails on media.html are full-size images scaled down via CSS
-- Image filenames have spaces and mixed case
 - Hero section hides venue info on mobile
 - No dark mode support
 - `&nbsp;` and empty `<p>` tags still used for spacing in some pages

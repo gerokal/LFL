@@ -661,7 +661,7 @@ data/NextSeason.txt
 
 ---
 
-### Task 4.2: Optimise images (WebP, compression, naming)
+### Task 4.2: Optimise images (WebP, compression, naming) ✅ COMPLETED
 
 **Steps:**
 
@@ -675,10 +675,17 @@ data/NextSeason.txt
 
 **Acceptance criteria:**
 
-- No BMP files remain
-- All gallery images have WebP versions
-- Thumbnails used in grids (not full-size scaled down)
-- Total image payload reduced 50%+
+- ✅ No BMP files remain (deleted `IFE.bmp` from `img/` and `img/players/`)
+- ✅ All gallery images have WebP versions (30 WebP files generated)
+- ✅ Thumbnails used in grids (12 gallery thumbnails at 300x200px)
+- ✅ Total image payload reduced 50%+ (achieved 66% reduction: 6.6MB → 2.3MB)
+
+**Implementation details:**
+- `build-img.js` created using Sharp, integrated as `npm run build:img`
+- 13 team logos renamed to lowercase-hyphenated format
+- 32 `<picture>` elements with WebP `<source>` + original fallback
+- `width`/`height` attributes added to all 35 `<img>` tags to prevent CLS
+- Gallery uses thumbnail WebP in grid, full-size WebP in lightbox links
 
 ---
 
